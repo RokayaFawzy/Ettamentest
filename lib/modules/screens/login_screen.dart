@@ -19,15 +19,13 @@ class _LoginScreenState extends State<LoginScreen> {
         child: SafeArea(
           child: Column(
             children: [
-              // Padding(
-              //   padding: EdgeInsets.all(10),
-              //   child: IconButton(
-              //     onPressed: () {},
-              //     icon: Icon(
-              //       Icons.arrow_back_ios
-              //     ),
-              //   ),
-              // ),
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.arrow_back_ios),
+                ),
+              ),
               SizedBox(
                 height: 180,
               ),
@@ -68,20 +66,45 @@ class _LoginScreenState extends State<LoginScreen> {
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     label: Text("Enter Username"),
-                    prefixIcon:Icon(Icons.person), 
+                    prefixIcon: Icon(Icons.person),
                   ),
                 ),
               ),
-               Padding(
+              Padding(
                 padding: EdgeInsets.all(12),
                 child: TextField(
-                  obscureText:passToggle ? true : false,
+                  obscureText: passToggle ? true : false,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     label: Text("Enter Password"),
-                    prefixIcon:Icon(Icons.lock), 
+                    prefixIcon: Icon(Icons.lock),
                   ),
                 ),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'doesn\'t have an account ?',
+                    style: TextStyle(
+                      color: Color.fromARGB(142, 14, 36, 73),
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      // Navigator.pushNamed(context, RegisterPage.id);
+                    },
+                    child: Text(
+                      '   REGISTER',
+                      style: TextStyle(
+                        color: Color.fromARGB(142, 14, 36, 73),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
