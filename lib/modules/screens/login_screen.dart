@@ -13,7 +13,7 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   bool passToggle = true;
   String? email, password;
-
+  bool rememberUser = false;
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -103,6 +103,10 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(
                 height: 30,
               ),
+              _buildRememberForgot(),
+              SizedBox(
+                height: 10,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -125,10 +129,56 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ],
               ),
+              SizedBox(
+                height: 30,
+              ),
+              // CustomButon(
+              //       text: 'Sign In',
+              //       onTap: () async {
+                     
+              //       },
+              //     ),
+                 SizedBox(
+                height: 30,
+              ),  
             ],
           ),
         ),
       ),
     );
+  }
+
+  Widget _buildGreyText(String text) {
+    return Text(
+      text,
+      style: const TextStyle(color: Colors.grey),
+    );
+  }
+
+  Widget _buildRememberForgot() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Row(
+          children: [
+            Checkbox(
+                value: rememberUser,
+                onChanged: (value) {
+                  setState(() {
+                    rememberUser = value!;
+                  });
+                }),
+            _buildGreyText("Remember me"),
+          ],
+        ),
+        TextButton(onPressed: () {
+          
+        }, child: _buildGreyText("Forgot password?")),
+      ],
+    );
+  }
+
+  Widget _buildOtherLogin() {
+    return Center();
   }
 }
