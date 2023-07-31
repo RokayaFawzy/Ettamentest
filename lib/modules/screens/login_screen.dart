@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:icon_forest/icon_forest.dart';
 
+import '../widgets/custom_botton.dart';
 import '../widgets/custom_text_field.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -68,7 +69,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     email = data;
                   },
                   hintText: 'Email',
-                  prefixIcon: Icon(Icons.person)),
+                  prefixIcon: Icon(Icons.done)),
               // Padding(
               //   padding: EdgeInsets.all(12),
               //   child: TextField(
@@ -88,7 +89,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     password = data;
                   },
                   hintText: 'Password',
-                  prefixIcon: Icon(Icons.person)),
+                  prefixIcon: Icon(Icons.remove_red_eye)),
               // Padding(
               //   padding: EdgeInsets.all(12),
               //   child: TextField(
@@ -101,9 +102,16 @@ class _LoginScreenState extends State<LoginScreen> {
               //   ),
               // ),
               SizedBox(
-                height: 30,
+                height: 20,
               ),
               _buildRememberForgot(),
+              SizedBox(
+                height: 10,
+              ),
+              CustomButon(
+                text: 'Sign In',
+                onTap: () async {},
+              ),
               SizedBox(
                 height: 10,
               ),
@@ -132,15 +140,11 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(
                 height: 30,
               ),
-              // CustomButon(
-              //       text: 'Sign In',
-              //       onTap: () async {
-
-              //       },
-              //     ),
+              _buildOtherLogin(),
               SizedBox(
-                height: 30,
+                height: 10,
               ),
+              _lineEnd(),
             ],
           ),
         ),
