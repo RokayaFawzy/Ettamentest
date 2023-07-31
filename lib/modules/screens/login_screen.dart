@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:icon_forest/icon_forest.dart';
 
+import '../widgets/custom_text_field.dart';
+
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
@@ -10,6 +12,7 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   bool passToggle = true;
+  String? email, password;
 
   @override
   Widget build(BuildContext context) {
@@ -60,27 +63,43 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(
                 height: 10,
               ),
-              Padding(
-                padding: EdgeInsets.all(12),
-                child: TextField(
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    label: Text("Enter Username"),
-                    prefixIcon: Icon(Icons.person),
-                  ),
-                ),
+              CustomFormTextField(
+                  onChange: (data) {
+                    email = data;
+                  },
+                  hintText: 'Email',
+                  prefixIcon: Icon(Icons.person)),
+              // Padding(
+              //   padding: EdgeInsets.all(12),
+              //   child: TextField(
+              //     decoration: InputDecoration(
+              //       border: OutlineInputBorder(),
+              //       label: Text("Enter Username"),
+              //       prefixIcon: Icon(Icons.person),
+              //     ),
+              //   ),
+              // ),
+              const SizedBox(
+                height: 10,
               ),
-              Padding(
-                padding: EdgeInsets.all(12),
-                child: TextField(
-                  obscureText: passToggle ? true : false,
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    label: Text("Enter Password"),
-                    prefixIcon: Icon(Icons.lock),
-                  ),
-                ),
-              ),
+              CustomFormTextField(
+                  obscureText: true,
+                  onChange: (data) {
+                    password = data;
+                  },
+                  hintText: 'Password',
+                  prefixIcon: Icon(Icons.person)),
+              // Padding(
+              //   padding: EdgeInsets.all(12),
+              //   child: TextField(
+              //     obscureText: passToggle ? true : false,
+              //     decoration: InputDecoration(
+              //       border: OutlineInputBorder(),
+              //       label: Text("Enter Password"),
+              //       prefixIcon: Icon(Icons.lock),
+              //     ),
+              //   ),
+              // ),
               SizedBox(
                 height: 30,
               ),
@@ -98,9 +117,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       // Navigator.pushNamed(context, RegisterPage.id);
                     },
                     child: Text(
-                      '   REGISTER',
+                      '   Sign Up ',
                       style: TextStyle(
-                        color: Color.fromARGB(142, 14, 36, 73),
+                        color: Color.fromARGB(216, 14, 36, 73),
                       ),
                     ),
                   ),
