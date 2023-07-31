@@ -135,12 +135,12 @@ class _LoginScreenState extends State<LoginScreen> {
               // CustomButon(
               //       text: 'Sign In',
               //       onTap: () async {
-                     
+
               //       },
               //     ),
-                 SizedBox(
+              SizedBox(
                 height: 30,
-              ),  
+              ),
             ],
           ),
         ),
@@ -171,14 +171,42 @@ class _LoginScreenState extends State<LoginScreen> {
             _buildGreyText("Remember me"),
           ],
         ),
-        TextButton(onPressed: () {
-          
-        }, child: _buildGreyText("Forgot password?")),
+        TextButton(onPressed: () {}, child: _buildGreyText("Forgot password?")),
       ],
     );
   }
 
   Widget _buildOtherLogin() {
     return Center();
+  }
+
+  Widget _lineEnd() {
+    return Container(
+      width: 375,
+      height: 34,
+      padding: const EdgeInsets.only(
+        top: 21,
+        left: 121,
+        right: 120,
+        bottom: 8,
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Container(
+            width: 134,
+            height: 5,
+            decoration: ShapeDecoration(
+              color: Color(0xFF123258),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(100),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
