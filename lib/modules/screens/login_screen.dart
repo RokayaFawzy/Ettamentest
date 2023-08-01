@@ -21,131 +21,122 @@ class _LoginScreenState extends State<LoginScreen> {
       color: Colors.white,
       child: SingleChildScrollView(
         child: SafeArea(
-          child: Column(
-            children: [
-              Padding(
-                padding: EdgeInsets.all(10),
-                child: IconButton(
-                  onPressed: () {},
-                  icon: Icon(Icons.arrow_back_ios),
-                ),
-              ),
-              SizedBox(
-                height: 180,
-              ),
-              Padding(
-                padding: EdgeInsets.all(10),
-                child: Text(
-                  "Welcome Back!",
-                  style: TextStyle(
-                    color: Color.fromARGB(203, 14, 36, 73),
-                    fontSize: 33,
-                    fontFamily: 'RobotoSlab',
-                    fontWeight: FontWeight.bold,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              children: [
+                Padding(
+                  padding: EdgeInsets.all(10),
+                  child: IconButton(
+                    onPressed: () {},
+                    icon: Icon(Icons.arrow_back_ios),
                   ),
                 ),
-              ),
-              SizedBox(
-                height: 5,
-              ),
-              Padding(
-                padding: EdgeInsets.all(10),
-                child: Text(
-                  " Sign in to continue ",
-                  style: TextStyle(
-                    color: Color.fromARGB(142, 14, 36, 73),
-                    fontSize: 18,
-                    // fontWeight: FontWeight.bold,
-                    // letterSpacing: 1,
-                    wordSpacing: 2,
+                SizedBox(height: 120),
+                Padding(
+                  padding: EdgeInsets.all(10),
+                  child: Text(
+                    "Welcome Back!",
+                    style: TextStyle(
+                      color: Color.fromARGB(203, 14, 36, 73),
+                      fontSize: 33,
+                      fontFamily: 'RobotoSlab',
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              CustomFormTextField(
-                  onChange: (data) {
-                    email = data;
-                  },
-                  hintText: 'Email',
-                  prefixIcon: Icon(Icons.done)),
-              // Padding(
-              //   padding: EdgeInsets.all(12),
-              //   child: TextField(
-              //     decoration: InputDecoration(
-              //       border: OutlineInputBorder(),
-              //       label: Text("Enter Username"),
-              //       prefixIcon: Icon(Icons.person),
-              //     ),
-              //   ),
-              // ),
-              const SizedBox(
-                height: 10,
-              ),
-              CustomFormTextField(
-                  obscureText: true,
-                  onChange: (data) {
-                    password = data;
-                  },
-                  hintText: 'Password',
-                  prefixIcon: Icon(Icons.remove_red_eye)),
-              // Padding(
-              //   padding: EdgeInsets.all(12),
-              //   child: TextField(
-              //     obscureText: passToggle ? true : false,
-              //     decoration: InputDecoration(
-              //       border: OutlineInputBorder(),
-              //       label: Text("Enter Password"),
-              //       prefixIcon: Icon(Icons.lock),
-              //     ),
-              //   ),
-              // ),
-              SizedBox(
-                height: 20,
-              ),
-              _buildRememberForgot(),
-              SizedBox(
-                height: 10,
-              ),
-              CustomButon(
-                text: 'Sign In',
-                onTap: () async {},
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'doesn\'t have an account ?',
+                SizedBox(
+                  height: 5,
+                ),
+                Padding(
+                  padding: EdgeInsets.all(10),
+                  child: Text(
+                    " Sign in to continue ",
                     style: TextStyle(
                       color: Color.fromARGB(142, 14, 36, 73),
+                      fontSize: 18,
+                      // fontWeight: FontWeight.bold,
+                      // letterSpacing: 1,
+                      wordSpacing: 2,
                     ),
                   ),
-                  GestureDetector(
-                    onTap: () {
-                      // Navigator.pushNamed(context, RegisterPage.id);
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                CustomFormTextField(
+                    onChange: (data) {
+                      email = data;
                     },
-                    child: Text(
-                      '   Sign Up ',
+                    hintText: 'Email',
+                    prefixIcon: Icons.done),
+                // Padding(
+                //   padding: EdgeInsets.all(12),
+                //   child: TextField(
+                //     decoration: InputDecoration(
+                //       border: OutlineInputBorder(),
+                //       label: Text("Enter Username"),
+                //       prefixIcon: Icon(Icons.person),
+                //     ),
+                //   ),
+                // ),
+                const SizedBox(
+                  height: 10,
+                ),
+                CustomFormTextField(
+                    obscureText: true,
+                    onChange: (data) {
+                      password = data;
+                    },
+                    hintText: 'Password',
+                    prefixIcon: Icons.remove_red_eye),
+                // Padding(
+                //   padding: EdgeInsets.all(12),
+                //   child: TextField(
+                //     obscureText: passToggle ? true : false,
+                //     decoration: InputDecoration(
+                //       border: OutlineInputBorder(),
+                //       label: Text("Enter Password"),
+                //       prefixIcon: Icon(Icons.lock),
+                //     ),
+                //   ),
+                // ),
+                SizedBox(height: 20),
+                _buildRememberForgot(),
+                SizedBox(height: 10),
+                CustomButon(
+                  text: 'Sign In',
+                  onTap: () async {},
+                ),
+                SizedBox(height: 10),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'doesn\'t have an account ?',
                       style: TextStyle(
-                        color: Color.fromARGB(216, 14, 36, 73),
+                        color: Color.fromARGB(142, 14, 36, 73),
                       ),
                     ),
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 30,
-              ),
-              _buildOtherLogin(),
-              SizedBox(
-                height: 10,
-              ),
-              _lineEnd(),
-            ],
+                    GestureDetector(
+                      onTap: () {
+                        // Navigator.pushNamed(context, RegisterPage.id);
+                      },
+                      child: Text(
+                        '   Sign Up ',
+                        style: TextStyle(
+                          color: Color.fromARGB(216, 14, 36, 73),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 10),
+                _buildOtherLogin(),
+                SizedBox(height: 5),
+                _lineEnd(),
+              ],
+            ),
           ),
         ),
       ),
