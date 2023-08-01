@@ -25,6 +25,7 @@ class CustomFormTextField extends StatelessWidget {
         hintStyle: TextStyle(
           color: Colors.black,
         ),
+        
         enabledBorder: OutlineInputBorder(
           borderSide: BorderSide(
             color: Colors.white,
@@ -35,7 +36,9 @@ class CustomFormTextField extends StatelessWidget {
             color: Colors.white,
           ),
         ),
+
       ),
+      
     );
   }
 }
