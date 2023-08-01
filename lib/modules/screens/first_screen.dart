@@ -9,13 +9,13 @@ class FirstScreen extends StatelessWidget {
     width: 375,
     height: 812,
     clipBehavior: Clip.antiAlias,
-    decoration: BoxDecoration(color: Colors.white),
+    decoration: const BoxDecoration(color: Colors.white),
     child: Stack(
         children: [
             Positioned(
                 left: 94,
                 top: 252,
-                child: Container(
+                child: SizedBox(
                     width: 187.08,
                     height: 167.02,
                     child: Stack(
@@ -25,7 +25,7 @@ class FirstScreen extends StatelessWidget {
                                 top: 133.74,
                                 child: Transform(
                                     transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(-0.26),
-                                    child: Container(
+                                    child: const SizedBox(
                                         width: 39.63,
                                         height: 34.41,
                                         child: Stack(children: [
@@ -39,7 +39,7 @@ class FirstScreen extends StatelessWidget {
                                 top: 19.94,
                                 child: Transform(
                                     transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(-2.88),
-                                    child: Container(
+                                    child: const SizedBox(
                                         width: 35.11,
                                         height: 30.49,
                                         child: Stack(children: [
@@ -52,7 +52,7 @@ class FirstScreen extends StatelessWidget {
                     ),
                 ),
             ),
-            Positioned(
+            const Positioned(
                 left: 118,
                 top: 284,
                 child: Stack(

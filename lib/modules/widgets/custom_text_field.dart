@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CustomFormTextField extends StatelessWidget {
-  const CustomFormTextField({this.hintText, this.onChange, this.obscureText=false, this.prefixIcon});
+  const CustomFormTextField({super.key, this.hintText, this.onChange, this.obscureText=false, this.prefixIcon});
 
 
   final String? hintText;
@@ -18,20 +18,21 @@ class CustomFormTextField extends StatelessWidget {
         if (data!.isEmpty) {
           return 'field is required';
         }
+        return null;
       },
       onChanged: onChange,
       decoration: InputDecoration(
         hintText: hintText,
-        hintStyle: TextStyle(
+        hintStyle: const TextStyle(
           color: Colors.black,
         ),
         
-        enabledBorder: OutlineInputBorder(
+        enabledBorder: const OutlineInputBorder(
           borderSide: BorderSide(
             color: Colors.white,
           ),
         ),
-        border: OutlineInputBorder(
+        border: const OutlineInputBorder(
           borderSide: BorderSide(
             color: Colors.white,
           ),

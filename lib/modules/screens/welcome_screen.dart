@@ -14,10 +14,10 @@ class welcomeScreen extends StatelessWidget {
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 16,
             ),
             Align(
@@ -28,7 +28,7 @@ class welcomeScreen extends StatelessWidget {
                   //   builder: (context)=> ,
                   //   ),);
                 },
-                child: Text(
+                child: const Text(
                   "SKIP",
                   style: TextStyle(
                     color: Color.fromARGB(255, 48, 110, 177),
@@ -37,7 +37,7 @@ class welcomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            Text(
+            const Text(
               "Welcome To Ettamen!",
               style: TextStyle(
                 color: Colors.black,
@@ -47,24 +47,24 @@ class welcomeScreen extends StatelessWidget {
                 wordSpacing: 2,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 50,
             ),
             Padding(
-              padding: EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               child: Image.asset("assets/images/MentalHealth.png"),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
-            Text(
+            const Text(
               "the starting page welcome to our app",
               style: TextStyle(
                 color: Colors.black38,
                 fontSize: 20,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 50,
             ),
             Row(
@@ -77,10 +77,10 @@ class welcomeScreen extends StatelessWidget {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => LoginScreen()),
+                        MaterialPageRoute(builder: (context) => const LoginScreen()),
                       );
                     },
-                    child: Padding(
+                    child: const Padding(
                       padding:
                           EdgeInsets.symmetric(vertical: 15, horizontal: 40),
                       child: Text(
@@ -103,7 +103,7 @@ class welcomeScreen extends StatelessWidget {
                       //   builder: (context)=>
                       //   ),);
                     },
-                    child: Padding(
+                    child: const Padding(
                       padding:
                           EdgeInsets.symmetric(vertical: 15, horizontal: 40),
                       child: Text(

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:icon_forest/icon_forest.dart';
 
 import '../widgets/custom_botton.dart';
 import '../widgets/custom_text_field.dart';
@@ -26,14 +25,18 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Column(
               children: [
                 Padding(
-                  padding: EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(10),
                   child: IconButton(
-                    onPressed: () {},
-                    icon: Icon(Icons.arrow_back_ios),
+                    onPressed: () {
+                      /*
+                        TODO: call back fn
+                      */
+                    },
+                    icon: const Icon(Icons.arrow_back_ios),
                   ),
                 ),
-                SizedBox(height: 120),
-                Padding(
+                const SizedBox(height: 120),
+                const Padding(
                   padding: EdgeInsets.all(10),
                   child: Text(
                     "Welcome Back!",
@@ -45,10 +48,10 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 5,
                 ),
-                Padding(
+                const Padding(
                   padding: EdgeInsets.all(10),
                   child: Text(
                     " Sign in to continue ",
@@ -61,7 +64,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 CustomFormTextField(
@@ -101,18 +104,18 @@ class _LoginScreenState extends State<LoginScreen> {
                 //     ),
                 //   ),
                 // ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 _buildRememberForgot(),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 CustomButon(
                   text: 'Sign In',
                   onTap: () async {},
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
+                    const Text(
                       'doesn\'t have an account ?',
                       style: TextStyle(
                         color: Color.fromARGB(142, 14, 36, 73),
@@ -122,7 +125,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       onTap: () {
                         // Navigator.pushNamed(context, RegisterPage.id);
                       },
-                      child: Text(
+                      child: const Text(
                         '   Sign Up ',
                         style: TextStyle(
                           color: Color.fromARGB(216, 14, 36, 73),
@@ -131,9 +134,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ],
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 _buildOtherLogin(),
-                SizedBox(height: 5),
+                const SizedBox(height: 5),
                 _lineEnd(),
               ],
             ),
@@ -172,7 +175,7 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   Widget _buildOtherLogin() {
-    return Center();
+    return const Center();
   }
 
   Widget _lineEnd() {
@@ -194,7 +197,7 @@ class _LoginScreenState extends State<LoginScreen> {
             width: 134,
             height: 5,
             decoration: ShapeDecoration(
-              color: Color(0xFF123258),
+              color: const Color(0xFF123258),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(100),
               ),
