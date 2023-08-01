@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../constant.dart';
+
 class CustomButon extends StatelessWidget {
   CustomButon({super.key, this.onTap, required this.text});
   VoidCallback? onTap;
@@ -9,18 +11,22 @@ class CustomButon extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        decoration: BoxDecoration(
-          color: const Color.fromARGB(142, 14, 36, 73),
-          borderRadius: BorderRadius.circular(8),
+        decoration: const BoxDecoration(
+          color: kPrimaryColor,
         ),
         width: double.infinity,
-        height: 60,
+        height: 50,
         child: Center(
-          child: Text(text,
+          child: Text(
+            text,
             style: const TextStyle(
+              fontFamily: 'NunitoSans',
+              fontSize: 14,
+              fontWeight: FontWeight.w700,
+              height: 1.70,
               color: Colors.white,
             ),
-            ),
+          ),
         ),
       ),
     );

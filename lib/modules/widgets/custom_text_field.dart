@@ -1,19 +1,23 @@
+import 'package:ettamentest/constant.dart';
 import 'package:flutter/material.dart';
 
 class CustomFormTextField extends StatelessWidget {
-  const CustomFormTextField({super.key, this.hintText, this.onChange, this.obscureText=false, this.prefixIcon});
-
+  const CustomFormTextField(
+      {super.key,
+      this.hintText,
+      this.onChange,
+      this.obscureText = false,
+      this.suffixIcon});
 
   final String? hintText;
   final Function(String)? onChange;
   final bool? obscureText;
-  final IconData? prefixIcon;
-
+  final IconData? suffixIcon;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      obscureText: obscureText! ,
+      obscureText: obscureText!,
       validator: (data) {
         if (data!.isEmpty) {
           return 'field is required';
@@ -22,24 +26,26 @@ class CustomFormTextField extends StatelessWidget {
       },
       onChanged: onChange,
       decoration: InputDecoration(
+        suffixIcon: suffixIcon != null ? Icon(suffixIcon) : null,
+        iconColor: kPrimaryColor,
+        suffixIconColor: kPrimaryColor,
         hintText: hintText,
         hintStyle: const TextStyle(
           color: Colors.black,
         ),
-        
         enabledBorder: const OutlineInputBorder(
+          borderRadius: BorderRadius.zero,
           borderSide: BorderSide(
-            color: Colors.white,
+            color: Colors.black54,
           ),
         ),
         border: const OutlineInputBorder(
+          borderRadius: BorderRadius.zero,
           borderSide: BorderSide(
             color: Colors.white,
           ),
         ),
-
       ),
-      
     );
   }
 }
