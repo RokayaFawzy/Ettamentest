@@ -83,24 +83,24 @@ class _LoginScreenState extends State<LoginScreen> {
                 const SizedBox(
                   height: 10,
                 ),
-                CustomFormTextField(
-                    obscureText: true,
-                    onChange: (data) {
-                      password = data;
-                    },
-                    hintText: 'Password',
-                    prefixIcon: Icons.remove_red_eye),
-                // Padding(
-                //   padding: EdgeInsets.all(12),
-                //   child: TextField(
-                //     obscureText: passToggle ? true : false,
-                //     decoration: InputDecoration(
-                //       border: OutlineInputBorder(),
-                //       label: Text("Enter Password"),
-                //       prefixIcon: Icon(Icons.lock),
-                //     ),
-                //   ),
-                // ),
+                // CustomFormTextField(
+                //     obscureText: true,
+                //     onChange: (data) {
+                //       password = data;
+                //     },
+                //     hintText: 'Password',
+                //     prefixIcon: Icons.remove_red_eye),
+                Padding(
+                  padding: EdgeInsets.all(12),
+                  child: TextField(
+                    obscureText: passToggle ? true : false,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      label: Text("Enter Password"),
+                      suffixIcon: Icon(Icons.remove_red_eye),
+                    ),
+                  ),
+                ),
                 SizedBox(height: 20),
                 _buildRememberForgot(),
                 SizedBox(height: 10),
