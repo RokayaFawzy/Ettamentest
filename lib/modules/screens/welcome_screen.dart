@@ -1,3 +1,4 @@
+import 'package:ettamentest/modules/screens/first_screen.dart';
 import 'package:ettamentest/modules/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -99,9 +100,10 @@ class welcomeScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                   child: InkWell(
                     onTap: () {
-                      //  Navigator.push(context, MaterialPageRoute(
-                      //   builder: (context)=>
-                      //   ),);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => FirstScreen()),
+                      );
                     },
                     child: const Padding(
                       padding:
