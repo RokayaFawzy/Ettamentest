@@ -12,7 +12,7 @@ class ResetPassword extends StatefulWidget {
 }
 
 class _ResetPasswordState extends State<ResetPassword> {
-  String? password,confirmpassword;
+  String? password, confirmpassword;
 
   @override
   Widget build(BuildContext context) {
@@ -67,7 +67,7 @@ class _ResetPasswordState extends State<ResetPassword> {
                 ),
               ),
               const SizedBox(height: 30),
-              CustomFormTextField(
+              CustomTextField(
                   obscureText: true,
                   onChange: (data) {
                     password = data;
@@ -75,7 +75,7 @@ class _ResetPasswordState extends State<ResetPassword> {
                   hintText: 'Password',
                   suffixIcon: Icons.visibility_off_outlined),
               const SizedBox(height: 20),
-              CustomFormTextField(
+              CustomTextField(
                   obscureText: true,
                   onChange: (data) {
                     confirmpassword = data;

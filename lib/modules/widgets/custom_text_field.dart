@@ -1,9 +1,10 @@
 import 'package:ettamentest/constant.dart';
 import 'package:flutter/material.dart';
 
-class CustomFormTextField extends StatelessWidget {
-  const CustomFormTextField(
+class CustomTextField extends StatelessWidget {
+  CustomTextField(
       {super.key,
+      this.inputType,
       this.hintText,
       this.onChange,
       this.obscureText = false,
@@ -11,20 +12,16 @@ class CustomFormTextField extends StatelessWidget {
 
   final String? hintText;
   final Function(String)? onChange;
+  TextInputType? inputType;
   final bool? obscureText;
   final IconData? suffixIcon;
 
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
+    return TextField(
       obscureText: obscureText!,
-      validator: (data) {
-        if (data!.isEmpty) {
-          return 'field is required';
-        }
-        return null;
-      },
       onChanged: onChange,
+      keyboardType: inputType,
       decoration: InputDecoration(
         suffixIcon: suffixIcon != null ? Icon(suffixIcon) : null,
         iconColor: kPrimaryColor,

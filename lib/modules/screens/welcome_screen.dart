@@ -2,6 +2,7 @@ import 'package:ettamentest/constant.dart';
 import 'package:ettamentest/modules/branch_screens/first_screen.dart';
 import 'package:ettamentest/modules/screens/login_screen.dart';
 import 'package:ettamentest/modules/screens/reset_password.dart';
+import 'package:ettamentest/modules/screens/verify_phone_screen.dart';
 import 'package:flutter/material.dart';
 
 class welcomeScreen extends StatelessWidget {
@@ -102,7 +103,7 @@ class welcomeScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const FirstScreen()),
+                            builder: (context) => const PhoneVerify()),
                       );
                     },
                     child: const Padding(

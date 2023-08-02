@@ -1,27 +1,26 @@
-import 'package:ettamentest/modules/screens/reset_password.dart';
-import 'package:ettamentest/modules/widgets/custom_botton.dart';
 import 'package:flutter/material.dart';
+import 'package:intl_phone_field/intl_phone_field.dart';
 
 import '../../constant.dart';
+import '../branch_screens/code_verify.dart';
+import '../widgets/custom_botton.dart';
 import '../widgets/custom_text_field.dart';
 
-class ForgotPassword extends StatefulWidget {
-  const ForgotPassword({super.key});
-  static String id = 'ForgotPassword';
+class PhoneVerify extends StatefulWidget {
+  const PhoneVerify({super.key});
 
   @override
-  State<ForgotPassword> createState() => _ForgotPasswordState();
+  State<PhoneVerify> createState() => _PhoneVerifyState();
 }
 
-class _ForgotPasswordState extends State<ForgotPassword> {
-  String? email;
-
+class _PhoneVerifyState extends State<PhoneVerify> {
+  String? phone;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
           title: const Text(
-            '             Forgot password',
+            '        Verify your phone number',
             textAlign: TextAlign.center,
             style: TextStyle(
               color: kPrimaryColor,
@@ -38,11 +37,6 @@ class _ForgotPasswordState extends State<ForgotPassword> {
               Navigator.of(context).pop();
             },
           ),
-          // const Icon(Icons.arrow_back_ios,),
-          // surfaceTintColor: Colors.white,
-          // backgroundColor: Colors.white,
-          // foregroundColor: Colors.white,
-
           elevation: 0,
           backgroundColor: Colors.transparent,
           iconTheme: const IconThemeData(color: kPrimaryColor)),
@@ -57,8 +51,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                 child: Center(
                   child: Text(
                     textAlign: TextAlign.center,
-                    " Please enter your email address. "
-                    "You will receive a link to create a new password via email ",
+                    " We have sent your SMS with code to your Phone number",
                     style: TextStyle(
                       color: Color.fromARGB(142, 14, 36, 73),
                       fontSize: 18,
@@ -70,20 +63,27 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                 ),
               ),
               const SizedBox(height: 30),
-              CustomTextField(
-                  onChange: (data) {
-                    email = data;
-                  },
-                  hintText: 'Email',
-                  suffixIcon: Icons.done),
+              // CustomTextField(
+              //     inputType: TextInputType.number,
+              //     onChange: (data) {
+              //       phone = data;
+              //     },
+              //     hintText: 'phone number'),
+              const IntlPhoneField(
+                decoration: InputDecoration(
+                    labelText: "phoneNumber",
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide(),
+                    )),
+              ),
               const SizedBox(height: 20),
               CustomButton(
-                text: "Send",
+                text: "Confirm",
                 onTap: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const ResetPassword(),
+                      builder: (context) => const CodePhone(),
                     ),
                   );
                 },

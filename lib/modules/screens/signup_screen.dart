@@ -61,7 +61,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 const SizedBox(
                   height: 30,
                 ),
-                CustomFormTextField(
+                CustomTextField(
                     onChange: (data) {
                       userName = data;
                     },
@@ -71,7 +71,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 const SizedBox(
                   height: 10,
                 ),
-                CustomFormTextField(
+                CustomTextField(
                     onChange: (data) {
                       email = data;
                     },
@@ -81,7 +81,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 const SizedBox(
                   height: 10,
                 ),
-                CustomFormTextField(
+                CustomTextField(
                     obscureText: true,
                     onChange: (data) {
                       password = data;
@@ -91,7 +91,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 const SizedBox(
                   height: 10,
                 ),
-                CustomFormTextField(
+                CustomTextField(
                     obscureText: true,
                     onChange: (data) {
                       confirmpassword = data;

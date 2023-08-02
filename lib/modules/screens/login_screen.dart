@@ -80,7 +80,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 const SizedBox(
                   height: 30,
                 ),
-                CustomFormTextField(
+                CustomTextField(
                     onChange: (data) {
                       email = data;
                     },
@@ -90,7 +90,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 const SizedBox(
                   height: 10,
                 ),
-                CustomFormTextField(
+                CustomTextField(
                     obscureText: true,
                     onChange: (data) {
                       password = data;
