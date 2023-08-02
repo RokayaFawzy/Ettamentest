@@ -12,7 +12,7 @@ class NavBarRoot extends StatefulWidget {
 class _NavBarRootState extends State<NavBarRoot> {
   int _selectedIndex = 0;
   final _screens = [
-    HomeV1(),
+    const HomeV1(),
     Container(),
     Container(),
     Container(),
@@ -31,18 +31,18 @@ class _NavBarRootState extends State<NavBarRoot> {
           ),
           elevation: 0,
           backgroundColor: Colors.transparent,
-          iconTheme: IconThemeData(color: kPrimaryColor)),
+          iconTheme: const IconThemeData(color: kPrimaryColor)),
       body: _screens[_selectedIndex],
-      bottomNavigationBar: Container(
+      bottomNavigationBar: SizedBox(
         height: 90,
         child: BottomNavigationBar(
           backgroundColor: kPrimaryColor,
           type: BottomNavigationBarType.fixed,
-          selectedItemColor: Color(0xFF18DF80),
+          selectedItemColor: const Color(0xFF18DF80),
           unselectedItemColor: Colors.white,
-          selectedLabelStyle: TextStyle(
+          selectedLabelStyle: const TextStyle(
             fontWeight: FontWeight.w700,
-            fontSize: 14,
+            fontSize: 10,
           ),
           currentIndex: _selectedIndex,
           onTap: (index) {
@@ -50,15 +50,15 @@ class _NavBarRootState extends State<NavBarRoot> {
               _selectedIndex = index;
             });
           },
-          items: [
+          items: const [
             BottomNavigationBarItem(
                 icon: Icon(Icons.dashboard_outlined), label: "DASHBOARD"),
             BottomNavigationBarItem(
                 icon: Icon(Icons.person_search_outlined), label: "SEARCH"),
             BottomNavigationBarItem(
-                icon: Icon(Icons.dashboard_outlined), label: "DASHBOARD"),
+                icon: Icon(Icons.notifications), label: "NOTIFICATIONS"),
             BottomNavigationBarItem(
-                icon: Icon(Icons.dashboard_outlined), label: "DASHBOARD"),
+                icon: Icon(Icons.chat_bubble_outline), label: "INBOX"),
           ],
         ),
       ),
