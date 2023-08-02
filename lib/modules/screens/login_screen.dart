@@ -196,31 +196,40 @@ class _LoginScreenState extends State<LoginScreen> {
 
     const IconData facebook =
         IconData(0xf09a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-
-    return Center(
+    const IconData google_plus_g =
+        IconData(0xf0d5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+    const IconData twitter =
+        IconData(0xf309, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+    return const Center(
       child: Column(
         children: [
-          const Text(
+          Text(
             'Sign in with social network:',
             style: TextStyle(
               color: Color.fromARGB(142, 14, 36, 73),
               fontSize: 16,
             ),
           ),
-          const SizedBox(
+          SizedBox(
             height: 10,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Tab(
-                icon: Icon(facebook),
+                icon: Icon(facebook, color: kPrimaryColor),
               ),
               Tab(
-                icon: Image.asset("assets/images/twiter.png"),
+                icon: Icon(
+                  google_plus_g,
+                  color: kPrimaryColor,
+                ),
               ),
               Tab(
-                icon: Image.asset("assets/images/icon.png"),
+                icon: Icon(
+                  twitter,
+                  color: kPrimaryColor,
+                ),
               )
             ],
           ),

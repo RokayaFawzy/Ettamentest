@@ -157,31 +157,48 @@ class _SignUpScreenState extends State<SignUpScreen> {
   }
 
   Widget _buildOtherLogin() {
-    return Center(
+    const _kFontFam = 'c1';
+    const String? _kFontPkg = null;
+
+    const IconData facebook =
+        IconData(0xf09a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+    const IconData google_plus_g =
+        IconData(0xf0d5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+    const IconData twitter =
+        IconData(0xf309, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+    return const Center(
       child: Column(
         children: [
-          const Text(
-            'Sign up with social network:',
+          Text(
+            'Sign in with social network:',
             style: TextStyle(
-              color: Color(0XFF4B667F),
+              color: Color.fromARGB(142, 14, 36, 73),
               fontSize: 16,
-              fontFamily: kFont,
             ),
           ),
-          const SizedBox(
+          SizedBox(
             height: 10,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Tab(
-                icon: Image.asset("assets/images/Facebook.png"),
+                icon: Icon(
+                  facebook,
+                  color: kPrimaryColor,
+                ),
               ),
               Tab(
-                icon: Image.asset("assets/images/twiter.png"),
+                icon: Icon(
+                  google_plus_g,
+                  color: kPrimaryColor,
+                ),
               ),
               Tab(
-                icon: Image.asset("assets/images/icon.png"),
+                icon: Icon(
+                  twitter,
+                  color: kPrimaryColor,
+                ),
               )
             ],
           ),
