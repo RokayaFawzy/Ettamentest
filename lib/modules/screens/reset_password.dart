@@ -1,27 +1,25 @@
-import 'package:ettamentest/modules/screens/reset_password.dart';
-import 'package:ettamentest/modules/widgets/custom_botton.dart';
 import 'package:flutter/material.dart';
 
 import '../../constant.dart';
+import '../widgets/custom_botton.dart';
 import '../widgets/custom_text_field.dart';
 
-class ForgotPassword extends StatefulWidget {
-  const ForgotPassword({super.key});
-  static String id = 'ForgotPassword';
+class ResetPassword extends StatefulWidget {
+  const ResetPassword({super.key});
 
   @override
-  State<ForgotPassword> createState() => _ForgotPasswordState();
+  State<ResetPassword> createState() => _ResetPasswordState();
 }
 
-class _ForgotPasswordState extends State<ForgotPassword> {
-  String? email;
+class _ResetPasswordState extends State<ResetPassword> {
+  String? password,confirmpassword;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
           title: const Text(
-            '             Forgot password',
+            '             Reset password',
             textAlign: TextAlign.center,
             style: TextStyle(
               color: kPrimaryColor,
@@ -57,8 +55,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                 child: Center(
                   child: Text(
                     textAlign: TextAlign.center,
-                    " Please enter your email address. "
-                    "You will receive a link to create a new password via email ",
+                    " Enter new password and confirm ",
                     style: TextStyle(
                       color: Color.fromARGB(142, 14, 36, 73),
                       fontSize: 18,
@@ -71,23 +68,22 @@ class _ForgotPasswordState extends State<ForgotPassword> {
               ),
               const SizedBox(height: 30),
               CustomFormTextField(
+                  obscureText: true,
                   onChange: (data) {
-                    email = data;
+                    password = data;
                   },
-                  hintText: 'Email',
-                  suffixIcon: Icons.done),
+                  hintText: 'Password',
+                  suffixIcon: Icons.visibility_off_outlined),
               const SizedBox(height: 20),
-              CustomButton(
-                text: "Send",
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const ResetPassword(),
-                    ),
-                  );
-                },
-              ),
+              CustomFormTextField(
+                  obscureText: true,
+                  onChange: (data) {
+                    confirmpassword = data;
+                  },
+                  hintText: 'Confirm password',
+                  suffixIcon: Icons.visibility_off_outlined),
+              const SizedBox(height: 20),
+              CustomButton(text: "Change Password"),
             ],
           ),
         ),

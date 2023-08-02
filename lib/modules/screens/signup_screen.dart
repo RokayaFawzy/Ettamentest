@@ -1,24 +1,21 @@
-import 'package:ettamentest/modules/branch_screens/first_screen.dart';
-import 'package:ettamentest/modules/screens/forgot_password.dart';
-import 'package:ettamentest/modules/screens/reset_password.dart';
-import 'package:ettamentest/modules/screens/signup_screen.dart';
+import 'package:ettamentest/modules/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../constant.dart';
 import '../widgets/custom_botton.dart';
 import '../widgets/custom_text_field.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class SignUpScreen extends StatefulWidget {
+  const SignUpScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<SignUpScreen> createState() => _SignUpScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _SignUpScreenState extends State<SignUpScreen> {
+  String? email, userName, confirmpassword, password;
   bool passToggle = true;
-  String? email, password;
-  bool rememberUser = false;
+
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -34,26 +31,26 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             elevation: 0,
             backgroundColor: Colors.transparent,
-            iconTheme: IconThemeData(color: kPrimaryColor)),
+            iconTheme: const IconThemeData(color: kPrimaryColor)),
         body: SafeArea(
           child: Padding(
             padding: const EdgeInsets.all(16),
             child: ListView(
               shrinkWrap: true,
               children: [
-                const SizedBox(height: 60),
+                const SizedBox(height: 30),
 
                 const Padding(
                   padding: EdgeInsets.all(10),
                   child: Center(
                     child: Text(
-                      "Welcome Back!",
+                      "SignUp",
                       style: TextStyle(
                         color: kPrimaryColor,
                         fontSize: 32,
                         height: 1.30,
                         fontFamily: 'Domine',
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w700,
                       ),
                     ),
                   ),
@@ -61,24 +58,18 @@ class _LoginScreenState extends State<LoginScreen> {
                 const SizedBox(
                   height: 5,
                 ),
-                const Padding(
-                  padding: EdgeInsets.all(10),
-                  child: Center(
-                    child: Text(
-                      " Sign in to continue ",
-                      style: TextStyle(
-                        color: Color.fromARGB(142, 14, 36, 73),
-                        fontSize: 18,
-                        // fontWeight: FontWeight.bold,
-                        // letterSpacing: 1,
-                        wordSpacing: 2,
-                      ),
-                    ),
-                  ),
-                ),
-
                 const SizedBox(
                   height: 30,
+                ),
+                CustomFormTextField(
+                    onChange: (data) {
+                      userName = data;
+                    },
+                    hintText: 'User Name',
+                    suffixIcon: Icons.done),
+
+                const SizedBox(
+                  height: 10,
                 ),
                 CustomFormTextField(
                     onChange: (data) {
@@ -97,10 +88,19 @@ class _LoginScreenState extends State<LoginScreen> {
                     },
                     hintText: 'Password',
                     suffixIcon: Icons.visibility_off_outlined),
+                const SizedBox(
+                  height: 10,
+                ),
+                CustomFormTextField(
+                    obscureText: true,
+                    onChange: (data) {
+                      confirmpassword = data;
+                    },
+                    hintText: 'Confirm password',
+                    suffixIcon: Icons.visibility_off_outlined),
 
                 SizedBox(height: 20),
-                _buildRememberForgot(),
-                const SizedBox(height: 10),
+
                 CustomButton(
                   text: 'Sign In',
                   onTap: () async {},
@@ -110,7 +110,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const Text(
-                      'Don\'t have an account ?',
+                      'Already have an account ?',
                       style: TextStyle(
                         color: Color.fromARGB(142, 14, 36, 73),
                         fontSize: 16,
@@ -121,12 +121,12 @@ class _LoginScreenState extends State<LoginScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const SignUpScreen(),
+                            builder: (context) => const LoginScreen(),
                           ),
                         );
                       },
                       child: const Text(
-                        '   Sign Up ',
+                        '   Sign in ',
                         style: TextStyle(
                           color: kPrimaryColor,
                         ),
@@ -156,55 +156,16 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  Widget _buildRememberForgot() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Row(
-          children: [
-            Checkbox(
-                fillColor: MaterialStateProperty.resolveWith<Color>(
-                    (Set<MaterialState> states) {
-                  return Color.fromARGB(90, 3, 16, 26).withOpacity(.32);
-                }),
-                value: rememberUser,
-                onChanged: (value) {
-                  setState(() {
-                    rememberUser = value!;
-                  });
-                }),
-            _buildGreyText("Remember me", FontWeight.w100)
-          ],
-        ),
-        TextButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const ForgotPassword(),
-                ),
-              );
-            },
-            child: _buildGreyText("Forgot password?", FontWeight.w400)),
-      ],
-    );
-  }
-
   Widget _buildOtherLogin() {
-    const _kFontFam = 'c1';
-    const String? _kFontPkg = null;
-
-    const IconData facebook =
-        IconData(0xf09a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-
     return Center(
       child: Column(
         children: [
           const Text(
-            'Sign in with social network:',
+            'Sign up with social network:',
             style: TextStyle(
-              color: Color.fromARGB(142, 14, 36, 73),
+              color: Color(0XFF4B667F),
               fontSize: 16,
+              fontFamily: kFont,
             ),
           ),
           const SizedBox(
@@ -214,7 +175,7 @@ class _LoginScreenState extends State<LoginScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Tab(
-                icon: Icon(facebook),
+                icon: Image.asset("assets/images/Facebook.png"),
               ),
               Tab(
                 icon: Image.asset("assets/images/twiter.png"),

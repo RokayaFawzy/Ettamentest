@@ -31,12 +31,15 @@ class CustomFormTextField extends StatelessWidget {
         suffixIconColor: kPrimaryColor,
         hintText: hintText,
         hintStyle: const TextStyle(
-          color: Colors.black,
-        ),
+            height: 0.1,
+            color: kPrimaryColor,
+            fontSize: 16,
+            fontFamily: 'NunitoSans',
+            fontWeight: FontWeight.w400),
         enabledBorder: const OutlineInputBorder(
           borderRadius: BorderRadius.zero,
           borderSide: BorderSide(
-            color: Colors.black54,
+            color: kTextfield,
           ),
         ),
         border: const OutlineInputBorder(
