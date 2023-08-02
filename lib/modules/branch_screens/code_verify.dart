@@ -41,18 +41,18 @@ class _CodePhoneState extends State<CodePhone> {
     });
   }
 
-  verify() {
-    setState(() {
-      _isLoading = true;
-    });
-    const oneSec = Duration(milliseconds: 10000);
-    _timer = Timer.periodic(oneSec, (timer) {
-      setState(() {
-        _isLoading = false;
-        _isVerified = true;
-      });
-    });
-  }
+  // verify() {
+  //   setState(() {
+  //     _isLoading = true;
+  //   });
+  //   const oneSec = Duration(milliseconds: 10000);
+  //   _timer = Timer.periodic(oneSec, (timer) {
+  //     setState(() {
+  //       _isLoading = false;
+  //       _isVerified = true;
+  //     });
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -160,17 +160,19 @@ class _CodePhoneState extends State<CodePhone> {
               const SizedBox(height: 20),
               CustomButton(
                 text: "Verify",
-                onTap: _code.length < 4
-                    ? null
-                    : () {
-                        verify();
-                        // Navigator.push(
-                        //   context,
-                        //   MaterialPageRoute(
-                        //     builder: (context) => const CodePhone(),
-                        //   ),
-                        // );
-                      },
+                onTap:
+                    // _code.length < 4
+                    //     ? null
+                    //     :
+                    () {
+                  // verify();
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(
+                  //     builder: (context) => const CodePhone(),
+                  //   ),
+                  // );
+                },
               ),
             ],
           ),
