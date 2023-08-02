@@ -93,6 +93,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       ),
                       leading: Icon(
                         CupertinoIcons.person,
+                        
                         color: kIconcolor,
                       ),
                       trailing: Icon(

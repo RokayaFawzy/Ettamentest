@@ -6,6 +6,8 @@ import 'package:ettamentest/modules/screens/reset_password.dart';
 import 'package:ettamentest/modules/screens/verify_phone_screen.dart';
 import 'package:flutter/material.dart';
 
+import '../app_screens/navbar_root.dart';
+
 class welcomeScreen extends StatelessWidget {
   const welcomeScreen({super.key});
 
@@ -25,9 +27,12 @@ class welcomeScreen extends StatelessWidget {
               alignment: Alignment.centerRight,
               child: TextButton(
                 onPressed: () {
-                  //  Navigator.push(context, MaterialPageRoute(
-                  //   builder: (context)=> ,
-                  //   ),);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => NavBarRoot(),
+                    ),
+                  );
                 },
                 child: const Text(
                   "SKIP",
