@@ -31,7 +31,7 @@ class DrCard extends StatelessWidget {
                         Column(
                           children: [
                             Stack(children: [
-                              Row(
+                              const Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 crossAxisAlignment: CrossAxisAlignment.end,
                                 children: [
@@ -50,7 +50,7 @@ class DrCard extends StatelessWidget {
                                   ),
                                 ],
                               ),
-                              Positioned(
+                              const Positioned(
                                 width: 300,
                                 child: Icon(
                                   Icons.more_vert,
@@ -64,16 +64,16 @@ class DrCard extends StatelessWidget {
                                     width: 30, height: 15, fit: BoxFit.fill),
                               ),
 
-//TODO: the image of doctor
+                              //TODO: the image of doctor
                             ]),
-                            SizedBox(
+                            const SizedBox(
                               height: 30,
                             ),
-                            Row(
+                            const Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [SizedBox(width: 10), Text(r'$' '30')],
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                           ],
