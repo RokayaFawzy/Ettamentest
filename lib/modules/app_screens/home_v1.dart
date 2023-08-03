@@ -33,7 +33,51 @@ class _HomeV1State extends State<HomeV1> {
                                 fontWeight: FontWeight.w700,
                                 fontFamily: kHomeFonts)),
                         const SizedBox(height: 20),
-                        _cardA(),
+                        //FirstContaner
+                        Container(
+                          padding: const EdgeInsets.only(
+                              top: 30, bottom: 30, right: 50, left: 50),
+                          color: kPrimaryColor,
+                          child: const Align(
+                            alignment: Alignment.bottomCenter,
+                            child: Row(
+                              children: [
+                                Expanded(
+                                  child: Column(
+                                    children: [
+                                      Text(
+                                        "January",
+                                        style: TextStyle(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.w500,
+                                            fontFamily: kHomeFonts,
+                                            color: Colors.white),
+                                      ),
+                                      SizedBox(height: 10),
+                                      Text(
+                                        "21",
+                                        style: TextStyle(
+                                            fontSize: 40,
+                                            fontWeight: FontWeight.w500,
+                                            fontFamily: kHomeFonts,
+                                            color: Colors.white),
+                                      ),
+                                      SizedBox(height: 10),
+                                      Text(
+                                        "at 4:30pm",
+                                        style: TextStyle(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.w500,
+                                            fontFamily: kHomeFonts,
+                                            color: Colors.white),
+                                      ),
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ],
@@ -41,56 +85,6 @@ class _HomeV1State extends State<HomeV1> {
               ),
             ),
             const SizedBox(height: 20),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget _doing() {
-    return const Column();
-  }
-
-  Widget _cardA() {
-    return Container(
-      padding: const EdgeInsets.only(top: 30, bottom: 30, right: 50, left: 50),
-      color: kPrimaryColor,
-      child: const Align(
-        alignment: Alignment.bottomCenter,
-        child: Row(
-          children: [
-            Expanded(
-              child: Column(
-                children: [
-                  Text(
-                    "January",
-                    style: TextStyle(
-                        fontSize: 12,
-                        fontWeight: FontWeight.w500,
-                        fontFamily: kHomeFonts,
-                        color: Colors.white),
-                  ),
-                  SizedBox(height: 10),
-                  Text(
-                    "21",
-                    style: TextStyle(
-                        fontSize: 40,
-                        fontWeight: FontWeight.w500,
-                        fontFamily: kHomeFonts,
-                        color: Colors.white),
-                  ),
-                  SizedBox(height: 10),
-                  Text(
-                    "at 4:30pm",
-                    style: TextStyle(
-                        fontSize: 12,
-                        fontWeight: FontWeight.w500,
-                        fontFamily: kHomeFonts,
-                        color: Colors.white),
-                  ),
-                ],
-              ),
-            )
           ],
         ),
       ),
