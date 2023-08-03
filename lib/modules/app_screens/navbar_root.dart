@@ -31,7 +31,10 @@ class _NavBarRootState extends State<NavBarRoot> {
           ),
           elevation: 0,
           backgroundColor: Colors.transparent,
-          iconTheme: const IconThemeData(color: kPrimaryColor)),
+          iconTheme: const IconThemeData(color: kPrimaryColor)
+          
+          
+          ),
       body: _screens[_selectedIndex],
       bottomNavigationBar: SizedBox(
         height: 90,
