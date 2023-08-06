@@ -1,4 +1,5 @@
 import 'package:ettamentest/constant.dart';
+import 'package:ettamentest/modules/widgets/dr_card.dart';
 import 'package:flutter/material.dart';
 
 class HomeV1 extends StatefulWidget {
@@ -36,43 +37,41 @@ class _HomeV1State extends State<HomeV1> {
                         //FirstContaner
                         Container(
                           padding: const EdgeInsets.only(
-                              top: 30, bottom: 30, right: 50, left: 50),
+                              top: 30, bottom: 40, right: 50, left: 40),
                           color: kPrimaryColor,
                           child: const Align(
                             alignment: Alignment.bottomCenter,
                             child: Row(
                               children: [
-                                Expanded(
-                                  child: Column(
-                                    children: [
-                                      Text(
-                                        "January",
-                                        style: TextStyle(
-                                            fontSize: 12,
-                                            fontWeight: FontWeight.w500,
-                                            fontFamily: kHomeFonts,
-                                            color: Colors.white),
-                                      ),
-                                      SizedBox(height: 10),
-                                      Text(
-                                        "21",
-                                        style: TextStyle(
-                                            fontSize: 40,
-                                            fontWeight: FontWeight.w500,
-                                            fontFamily: kHomeFonts,
-                                            color: Colors.white),
-                                      ),
-                                      SizedBox(height: 10),
-                                      Text(
-                                        "at 4:30pm",
-                                        style: TextStyle(
-                                            fontSize: 12,
-                                            fontWeight: FontWeight.w500,
-                                            fontFamily: kHomeFonts,
-                                            color: Colors.white),
-                                      ),
-                                    ],
-                                  ),
+                                Column(
+                                  children: [
+                                    Text(
+                                      "January",
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w500,
+                                          fontFamily: kHomeFonts,
+                                          color: Colors.white),
+                                    ),
+                                    SizedBox(height: 10),
+                                    Text(
+                                      "21",
+                                      style: TextStyle(
+                                          fontSize: 40,
+                                          fontWeight: FontWeight.w500,
+                                          fontFamily: kHomeFonts,
+                                          color: Colors.white),
+                                    ),
+                                    SizedBox(height: 10),
+                                    Text(
+                                      "at 4:30pm",
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w500,
+                                          fontFamily: kHomeFonts,
+                                          color: Colors.white),
+                                    ),
+                                  ],
                                 )
                               ],
                             ),
@@ -80,6 +79,7 @@ class _HomeV1State extends State<HomeV1> {
                         ),
                       ],
                     ),
+                    const DrCard(),
                   ],
                 ),
               ),
