@@ -7,6 +7,7 @@ import 'package:ettamentest/modules/screens/verify_phone_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../app_screens/navbar_root.dart';
+import '../components/item.dart';
 import '../widgets/dr_card.dart';
 
 class welcomeScreen extends StatelessWidget {
@@ -110,8 +111,7 @@ class welcomeScreen extends StatelessWidget {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(
-                              builder: (context) => const DrCard()),
+                          MaterialPageRoute(builder: (context) => DrCard()),
                         );
                       },
                       child: const Padding(
