@@ -79,7 +79,7 @@ class _HomeV1State extends State<HomeV1> {
                         ),
                       ],
                     ),
-                    const DrCard(),
+                    // const DrCard(),
                   ],
                 ),
               ),
