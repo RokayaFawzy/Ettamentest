@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 
 import '../app_screens/navbar_root.dart';
 import '../components/item.dart';
+import '../widgets/categories_item.dart';
 import '../widgets/dr_card.dart';
 
 class welcomeScreen extends StatelessWidget {
@@ -111,7 +112,8 @@ class welcomeScreen extends StatelessWidget {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => DrCard()),
+                          MaterialPageRoute(
+                              builder: (context) => CategoriesItem()),
                         );
                       },
                       child: const Padding(

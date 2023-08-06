@@ -1,42 +1,59 @@
-// import 'package:ettamentest/modules/models/categories.dart';
-// import 'package:flutter/material.dart';
-// import 'package:flutter/services.dart';
-// import 'package:flutter/material.dart';
+import 'package:ettamentest/constant.dart';
+import 'package:ettamentest/modules/models/categories.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
-// class Item extends StatefulWidget {
-//    Item({Key? key, required this.number, required this.color})
-//       : super(key: key);
-//   final Item number;
-//   final Color color;
+class ListItem extends StatelessWidget {
+  const ListItem({Key? key, required this.number, required this.color})
+      : super(key: key);
+  final Item number;
+  final Color color;
 
-//   @override
-//   State<Item> createState() => _ItemState();
-// }
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 70,
+      child: Row(
+        children: [
+          Container(
+            color: color,
+            child: Image.asset(number.image!),
+          ),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                //TODO: spacebetween them
 
-// class _ItemState extends State<Item> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//       height: 100,
-//       child: Row(
-//         children: [
-//           Container(
-//             color: Colors.number,
-//             child: Image.asset(number.image!),
-//           ),
-//           Column(
-//             crossAxisAlignment: CrossAxisAlignment.start,
-//             mainAxisAlignment: MainAxisAlignment.center,
-//             children: [
-//               Padding(
-//                   padding: const EdgeInsets.only(left: 20),
-//                   child: Text(
-//                     number.titel,
-//                   ))
-//             ],
-//           )
-//         ],
-//       ),
-//     );
-//   }
-// }
+                Padding(
+                    padding: const EdgeInsets.only(left: 20),
+                    child: Text(
+                      number.titel1,
+                      style: TextStyle(color: kPrimaryColor, fontSize: 20),
+                    )),
+                Padding(
+                  padding: const EdgeInsets.only(left: 20),
+                  child: Text(
+                    number.desc,
+                    style: const TextStyle(color: kPrimaryColor, fontSize: 10),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Spacer(
+            flex: 1,
+          ),
+          IconButton(
+              onPressed: () {},
+              icon: Icon(
+                Icons.chevron_right,
+                color: kPrimaryColor,
+                size: 12,
+              ))
+        ],
+      ),
+    );
+  }
+}

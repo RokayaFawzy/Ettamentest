@@ -2,6 +2,7 @@ import 'package:ettamentest/constant.dart';
 import 'package:ettamentest/modules/widgets/dr_card.dart';
 import 'package:flutter/material.dart';
 
+import '../widgets/categories_item.dart';
 import '../widgets/date_widget.dart';
 
 class HomeV1 extends StatefulWidget {
@@ -51,9 +52,9 @@ class _HomeV1State extends State<HomeV1> {
                 thickness: 0.1,
                 height: 8,
               ),
-              //TODO:categories
-
-              //TODO:categories
+              // Scrollbar(child: CategoriesItem()),
+              //TODO: insert CategoriesItem
+              //TODO: insert CategoriesItem
             ],
           )
         ])));
