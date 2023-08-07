@@ -52,8 +52,9 @@ class _HomeV1State extends State<HomeV1> {
                 thickness: 0.1,
                 height: 8,
               ),
-              // Scrollbar(child: CategoriesItem()),
               //TODO: insert CategoriesItem
+              // Scrollbar(child: CategoriesItem()),
+
               //TODO: insert CategoriesItem
             ],
           )

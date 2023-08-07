@@ -45,14 +45,10 @@ class CategoriesItem extends StatelessWidget {
 
   List<Widget> getList(List<Item> number) {
     List<ListItem> itemList = [];
-    for (int i = 0; i < number.length;) {
+    for (int i = 0; i < number.length; i++) {
       itemList.add(ListItem(number: number[i], color: Colors.white));
-      Divider(
-        color: kPrimaryColor,
-        thickness: 0.1,
-        height: 8,
-      );
-      i++;
+      
+     
     }
     return itemList;
   }
