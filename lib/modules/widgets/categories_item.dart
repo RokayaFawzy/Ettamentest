@@ -36,8 +36,8 @@ class CategoriesItem extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: ListView(
+    return Container(
+      child: ListView(
         children: getList(number),
       ),
     );
@@ -47,8 +47,6 @@ class CategoriesItem extends StatelessWidget {
     List<ListItem> itemList = [];
     for (int i = 0; i < number.length; i++) {
       itemList.add(ListItem(number: number[i], color: Colors.white));
-      
-     
     }
     return itemList;
   }

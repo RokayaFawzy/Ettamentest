@@ -4,12 +4,12 @@ import 'package:flutter/material.dart';
 
 class DrInformationCard extends StatelessWidget {
   const DrInformationCard({super.key});
-
+  final int n = 10;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Card(
-        child: Column(
+    return Column(
+      children: List.generate(n, (index) {
+        return Column(
           children: [
             Row(children: [
               Stack(
@@ -118,11 +118,12 @@ class DrInformationCard extends StatelessWidget {
             Divider(
               color: kPrimaryColor,
               thickness: 0.1,
-              height: 8,
+              height: 9,
             ),
+            // "${index + 1}"
           ],
-        ),
-      ),
+        );
+      }),
     );
   }
 }

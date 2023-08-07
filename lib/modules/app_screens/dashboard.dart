@@ -53,7 +53,7 @@ class _DashboardState extends State<Dashboard> {
                 height: 8,
               ),
               //TODO: insert CategoriesItem
-              // CategoriesItem(),
+              CategoriesItem(),
 
               //TODO: insert CategoriesItem
             ],
