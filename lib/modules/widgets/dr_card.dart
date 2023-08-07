@@ -71,7 +71,7 @@ class DrCard extends StatelessWidget {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 15),
             width: double.infinity,
-            child: Column(
+            child: const Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 SizedBox(
@@ -86,7 +86,7 @@ class DrCard extends StatelessWidget {
                         fontSize: 14),
                   ),
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 5,
                 ),
                 SizedBox(
@@ -109,15 +109,18 @@ class DrCard extends StatelessWidget {
             child: ElevatedButton(
               onPressed: () {},
               style: ElevatedButton.styleFrom(
-                backgroundColor: Color(0xFF18DF80),
-                elevation: 0,
-              ),
+                  backgroundColor: Color(0xFF18DF80),
+                  elevation: 0,
+                  shape: BeveledRectangleBorder(
+                      borderRadius:
+                          BorderRadius.horizontal(left: Radius.zero))),
               child: const Text(
                 'Send Message',
                 style: TextStyle(fontSize: 12),
               ),
             ),
           )
+          
         ],
       ),
     );

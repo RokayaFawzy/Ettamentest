@@ -5,14 +5,14 @@ import 'package:flutter/material.dart';
 import '../widgets/categories_item.dart';
 import '../widgets/date_widget.dart';
 
-class HomeV1 extends StatefulWidget {
-  const HomeV1({super.key});
+class Dashboard extends StatefulWidget {
+  const Dashboard({super.key});
 
   @override
-  State<HomeV1> createState() => _HomeV1State();
+  State<Dashboard> createState() => _DashboardState();
 }
 
-class _HomeV1State extends State<HomeV1> {
+class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,7 +53,7 @@ class _HomeV1State extends State<HomeV1> {
                 height: 8,
               ),
               //TODO: insert CategoriesItem
-              // Scrollbar(child: CategoriesItem()),
+              // CategoriesItem(),
 
               //TODO: insert CategoriesItem
             ],

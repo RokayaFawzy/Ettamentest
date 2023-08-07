@@ -1,5 +1,5 @@
 import 'package:ettamentest/constant.dart';
-import 'package:ettamentest/modules/app_screens/home_v1.dart';
+import 'package:ettamentest/modules/app_screens/dashboard.dart';
 import 'package:flutter/material.dart';
 
 class NavBarRoot extends StatefulWidget {
@@ -12,7 +12,7 @@ class NavBarRoot extends StatefulWidget {
 class _NavBarRootState extends State<NavBarRoot> {
   int _selectedIndex = 0;
   final _screens = [
-    const HomeV1(),
+    const Dashboard(),
     Container(),
     Container(),
     Container(),
@@ -31,10 +31,7 @@ class _NavBarRootState extends State<NavBarRoot> {
           ),
           elevation: 0,
           backgroundColor: Colors.transparent,
-          iconTheme: const IconThemeData(color: kPrimaryColor)
-          
-          
-          ),
+          iconTheme: const IconThemeData(color: kPrimaryColor)),
       body: _screens[_selectedIndex],
       bottomNavigationBar: SizedBox(
         height: 90,
