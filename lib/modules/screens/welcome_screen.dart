@@ -117,6 +117,7 @@ class welcomeScreen extends StatelessWidget {
                           context,
                           MaterialPageRoute(builder: (context) => DrDetails()),
                         );
+                        //
                       },
                       child: const Padding(
                         padding:
