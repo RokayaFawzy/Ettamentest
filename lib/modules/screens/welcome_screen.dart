@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 
 import '../app_screens/navbar_root.dart';
 import '../branch_screens/chiropractor.dart';
+import '../branch_screens/dr_details.dart';
 import '../components/item.dart';
 import '../widgets/categories_item.dart';
 import '../widgets/dr_card.dart';
@@ -114,8 +115,7 @@ class welcomeScreen extends StatelessWidget {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(
-                              builder: (context) => ChiropractorScreen()),
+                          MaterialPageRoute(builder: (context) => DrDetails()),
                         );
                       },
                       child: const Padding(
