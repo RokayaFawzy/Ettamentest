@@ -30,7 +30,7 @@ class FirstScreen extends StatelessWidget {
                     height: 35,
                   ),
                 ),
-                Align(
+                const Align(
                   alignment: Alignment.center,
                   child: Text("Ettamen",
                       style: TextStyle(

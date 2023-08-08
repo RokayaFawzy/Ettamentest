@@ -119,9 +119,12 @@ class welcomeScreen extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => 
-                              // PhoneVerify()
-                              EditInformation()),
+                              builder: (context) =>
+                                  PhoneVerify()
+                                  // EditInformation()
+                                  // AdvertisementLogo()
+                              // ChiropractorScreen()
+                              ),
                         );
                         //
                       },

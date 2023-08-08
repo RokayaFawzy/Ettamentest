@@ -26,9 +26,7 @@ class DrCard extends StatelessWidget {
                     'assets/images/images.jpeg',
                     fit: BoxFit.cover,
                   )),
-              const SizedBox(
-                width: 5,
-              ),
+              const SizedBox(width: 5),
               Expanded(
                 child: SizedBox(
                   height: 60,

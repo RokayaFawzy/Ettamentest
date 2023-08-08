@@ -35,7 +35,7 @@ class DrDetails extends StatelessWidget {
                     Image.asset('assets/images/images.jpeg', fit: BoxFit.cover),
                     //TODO:make photo fit all the space
 
-                    Icon(
+                    const Icon(
                       Icons.star,
                       color: Colors.green,
                       size: 20,
@@ -43,8 +43,8 @@ class DrDetails extends StatelessWidget {
                   ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
+              const Padding(
+                padding: EdgeInsets.all(8.0),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -129,12 +129,12 @@ class DrDetails extends StatelessWidget {
                   ],
                 ),
               ),
-              Divider(
+              const Divider(
                 color: kPrimaryColor,
                 thickness: 0.1,
                 height: 9,
               ),
-              ListTile(
+              const ListTile(
                 title: Text(
                   'phone number',
                   style: TextStyle(
@@ -153,12 +153,12 @@ class DrDetails extends StatelessWidget {
                   size: 10,
                 ),
               ),
-              Divider(
+              const Divider(
                 color: kPrimaryColor,
                 thickness: 0.1,
                 height: 15,
               ),
-              ListTile(
+              const ListTile(
                 title: Text(
                   'Address',
                   style: TextStyle(
@@ -177,14 +177,14 @@ class DrDetails extends StatelessWidget {
                   size: 10,
                 ),
               ),
-              Divider(
+              const Divider(
                 color: kPrimaryColor,
                 thickness: 0.1,
                 height: 15,
               ),
             ]),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -224,12 +224,12 @@ class DrDetails extends StatelessWidget {
                 ],
               ),
             ),
-            Divider(
+            const Divider(
               color: kPrimaryColor,
               thickness: 0.1,
               height: 15,
             ),
-            SizedBox(
+            const SizedBox(
               height: 8,
             ),
             Padding(

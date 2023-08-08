@@ -17,14 +17,14 @@ class BranchReset extends StatelessWidget {
             child: Stack(
               children: [
                 Align(
-                  alignment: Alignment(0, -0.3),
+                  alignment: const Alignment(0, -0.3),
                   child: Image.asset(
                     "assets/images/BG object (1).png",
                     fit: BoxFit.fill,
                   ),
                 ),
                 Align(
-                  alignment: Alignment(0, -0.25),
+                  alignment: const Alignment(0, -0.25),
                   child: Image.asset(
                     "assets/images/key.png",
                     fit: BoxFit.cover,
@@ -33,7 +33,7 @@ class BranchReset extends StatelessWidget {
                   ),
                 ),
                 Align(
-                  alignment: Alignment(0, 0.2),
+                  alignment: const Alignment(0, 0.2),
                   child: Container(
                     width: 250,
                     height: 66,
@@ -46,7 +46,7 @@ class BranchReset extends StatelessWidget {
                   ),
                 ),
                 Align(
-                    alignment: Alignment(0, 0.8),
+                    alignment: const Alignment(0, 0.8),
                     child: CustomButton(
                       text: "Done",
                       onTap: () {},
