@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../widgets/categories_item.dart';
 import '../widgets/date_widget.dart';
+import '../widgets/dr_infor_card.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
@@ -53,9 +54,28 @@ class _DashboardState extends State<Dashboard> {
                 height: 8,
               ),
               //TODO: insert CategoriesItem
-              CategoriesItem(),
+              // CategoriesItem(),
+              //TODO: insert CategoriesItem,
+              Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Top Rated Doctor",
+                      style: TextStyle(
+                          color: kPrimaryColor,
+                          fontSize: 16,
+                          fontFamily: kHomeFonts,
+                          fontWeight: FontWeight.w700,
+                          height: 1.20),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(height: 10),
 
-              //TODO: insert CategoriesItem
+              DrInformationCard(),
             ],
           )
         ])));
