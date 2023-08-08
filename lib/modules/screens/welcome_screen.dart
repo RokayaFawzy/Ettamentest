@@ -1,5 +1,5 @@
 import 'package:ettamentest/constant.dart';
-import 'package:ettamentest/modules/branch_screens/first_screen.dart';
+import 'package:ettamentest/modules/design_screens/first_screen.dart';
 import 'package:ettamentest/modules/screens/login_screen.dart';
 import 'package:ettamentest/modules/screens/profile_screen.dart';
 import 'package:ettamentest/modules/screens/reset_password.dart';
@@ -10,6 +10,7 @@ import '../app_screens/navbar_root.dart';
 import '../branch_screens/chiropractor.dart';
 import '../branch_screens/dr_details.dart';
 import '../components/item.dart';
+import '../design_screens/branch_reset.dart';
 import '../widgets/categories_item.dart';
 import '../widgets/dr_card.dart';
 import '../widgets/dr_infor_card.dart';
@@ -115,7 +116,8 @@ class welcomeScreen extends StatelessWidget {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => DrDetails()),
+                          MaterialPageRoute(
+                              builder: (context) => BranchReset()),
                         );
                         //
                       },

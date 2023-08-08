@@ -1,4 +1,4 @@
-import 'package:ettamentest/modules/branch_screens/first_screen.dart';
+import 'package:ettamentest/modules/design_screens/first_screen.dart';
 import 'package:ettamentest/modules/screens/forgot_password.dart';
 import 'package:ettamentest/modules/screens/reset_password.dart';
 import 'package:ettamentest/modules/screens/signup_screen.dart';

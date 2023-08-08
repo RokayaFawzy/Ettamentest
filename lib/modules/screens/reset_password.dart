@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../constant.dart';
+import '../design_screens/branch_reset.dart';
 import '../widgets/custom_botton.dart';
 import '../widgets/custom_text_field.dart';
 
@@ -83,7 +84,15 @@ class _ResetPasswordState extends State<ResetPassword> {
                   hintText: 'Confirm password',
                   suffixIcon: Icons.visibility_off_outlined),
               const SizedBox(height: 20),
-              CustomButton(text: "Change Password"),
+              CustomButton(
+                text: "Change Password",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => BranchReset()),
+                  );
+                },
+              ),
             ],
           ),
         ),

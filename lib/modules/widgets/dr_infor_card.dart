@@ -2,6 +2,8 @@ import 'package:ettamentest/constant.dart';
 import 'package:ettamentest/modules/widgets/custom_botton.dart';
 import 'package:flutter/material.dart';
 
+import '../branch_screens/dr_details.dart';
+
 class DrInformationCard extends StatelessWidget {
   const DrInformationCard({super.key});
   final int n = 10;
@@ -97,7 +99,12 @@ class DrInformationCard extends StatelessWidget {
                     height: 35,
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => DrDetails()),
+                      );
+                    },
                     style: ElevatedButton.styleFrom(
                         backgroundColor: kPrimaryColor,
                         elevation: 0,

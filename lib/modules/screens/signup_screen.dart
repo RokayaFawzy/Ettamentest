@@ -2,6 +2,7 @@ import 'package:ettamentest/modules/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../constant.dart';
+import '../design_screens/signup_branch.dart';
 import '../widgets/custom_botton.dart';
 import '../widgets/custom_text_field.dart';
 
@@ -103,7 +104,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
                 CustomButton(
                   text: 'Sign In',
-                  onTap: () async {},
+                  onTap: () async {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => SignUpBracch()),
+                    );
+                  },
                 ),
                 const SizedBox(height: 10),
                 Row(
