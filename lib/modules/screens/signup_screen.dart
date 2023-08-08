@@ -103,7 +103,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 SizedBox(height: 20),
 
                 CustomButton(
-                  text: 'Sign In',
+                  text: 'Sign Up',
                   onTap: () async {
                     Navigator.push(
                       context,
