@@ -57,14 +57,14 @@ class DrDetails extends StatelessWidget {
                                 fontSize: 22,
                                 fontWeight: FontWeight.w600,
                                 color: kPrimaryColor)),
-                        SizedBox(width: 8),
+                        SizedBox(width: 88),
                         Text(r"$" "24",
                             style: TextStyle(
                                 fontSize: 22,
                                 fontWeight: FontWeight.w400,
                                 color: kPrimaryColor,
                                 fontFamily: kHomeFonts)),
-                        SizedBox(height: 15),
+                        SizedBox(height: 40),
                       ],
                     ),
                     Text("Сardiologist",
@@ -72,7 +72,7 @@ class DrDetails extends StatelessWidget {
                             fontSize: 16,
                             fontWeight: FontWeight.w400,
                             color: kIconcolor)),
-                    SizedBox(height: 8),
+                    SizedBox(height: 14),
                     Column(
                       children: [
                         Row(
@@ -138,10 +138,10 @@ class DrDetails extends StatelessWidget {
                 title: Text(
                   'phone number',
                   style: TextStyle(
-                    fontFamily: kFont,
-                    fontSize: 14,
-                    fontWeight: FontWeight.w600,
-                  ),
+                      fontFamily: kFont,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                      color: kPrimaryColor),
                 ),
                 leading: Icon(
                   CupertinoIcons.phone,
@@ -162,10 +162,10 @@ class DrDetails extends StatelessWidget {
                 title: Text(
                   'Address',
                   style: TextStyle(
-                    fontFamily: kFont,
-                    fontSize: 14,
-                    fontWeight: FontWeight.w600,
-                  ),
+                      fontFamily: kFont,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                      color: kPrimaryColor),
                 ),
                 leading: Icon(
                   CupertinoIcons.placemark,
@@ -183,6 +183,52 @@ class DrDetails extends StatelessWidget {
                 height: 15,
               ),
             ]),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text("Biography",
+                      style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w700,
+                          fontFamily: kHomeFonts,
+                          color: kPrimaryColor)),
+                  SizedBox(
+                    height: 9,
+                  ),
+                  Text(
+                      "Amet amet Lorem eu consectetur in deserunt nostrud dolor culpa ad sint amet. Nostrud deserunt consectetur culpa minim mollit veniam aliquip pariatur exercitation ullamco ea voluptate et. Pariatur ipsum mollit magna proident nisi ipsum.",
+                      style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                          fontFamily: kFont,
+                          color: kPrimaryColor)),
+                  SizedBox(
+                    height: 9,
+                  ),
+                  Row(
+                    children: [
+                      Text(
+                        "Read more",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w400, color: kPrimaryColor),
+                      ),
+                      Icon(
+                        Icons.arrow_forward_ios_sharp,
+                        color: kPrimaryColor,
+                        size: 12,
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            ),
+            Divider(
+              color: kPrimaryColor,
+              thickness: 0.1,
+              height: 15,
+            ),
             SizedBox(
               height: 8,
             ),

@@ -9,8 +9,10 @@ import 'package:flutter/material.dart';
 import '../app_screens/navbar_root.dart';
 import '../branch_screens/chiropractor.dart';
 import '../branch_screens/dr_details.dart';
+import '../branch_screens/edit_Info.dart';
 import '../components/item.dart';
 import '../design_screens/branch_reset.dart';
+import '../widgets/advertisement.dart';
 import '../widgets/categories_item.dart';
 import '../widgets/dr_card.dart';
 import '../widgets/dr_infor_card.dart';
@@ -117,7 +119,9 @@ class welcomeScreen extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => PhoneVerify()),
+                              builder: (context) => 
+                              // PhoneVerify()
+                              EditInformation()),
                         );
                         //
                       },
