@@ -29,6 +29,28 @@ class _NavBarRootState extends State<NavBarRoot> {
               // Navigator.of(context).pop();
             },
           ),
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              CircleAvatar(
+                radius: 14,
+                backgroundColor: Colors.black38,
+                child: CircleAvatar(
+                  radius: 13,
+                  backgroundImage: AssetImage('assets/images/123.jpg'),
+                ),
+              ),
+            ],
+          ),
+          flexibleSpace: Column(
+            children: [
+              Container(
+                height: 1, // Height of the line
+                color: Colors.grey, // Color of the line
+              ),
+              // Add other widgets if needed
+            ],
+          ),
           elevation: 0,
           backgroundColor: Colors.transparent,
           iconTheme: const IconThemeData(color: kPrimaryColor)),
