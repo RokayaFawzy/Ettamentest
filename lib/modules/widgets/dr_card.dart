@@ -23,7 +23,7 @@ class DrCard extends StatelessWidget {
                   height: 70,
                   width: 70,
                   child: Image.asset(
-                    'assets/images/123.jpg',
+                    'assets/images/images.jpeg',
                     fit: BoxFit.cover,
                   )),
               const SizedBox(
@@ -120,7 +120,6 @@ class DrCard extends StatelessWidget {
               ),
             ),
           )
-          
         ],
       ),
     );

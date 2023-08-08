@@ -12,7 +12,7 @@ class AdvertisementLogo extends StatelessWidget {
         children: [
           Image.asset('assets/images/images.jpeg', fit: BoxFit.cover),
           RichText(
-              text: TextSpan(children: [
+              text: const TextSpan(children: [
             TextSpan(
                 text: 'Get a free ',
                 style: TextStyle(color: kPrimaryColor, fontSize: 20)),
@@ -28,3 +28,4 @@ class AdvertisementLogo extends StatelessWidget {
     ));
   }
 }
+//TODO:we want to complete the code

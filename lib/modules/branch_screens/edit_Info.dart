@@ -40,7 +40,7 @@ class EditInformation extends StatelessWidget {
             shrinkWrap: true,
             children: [
               Stack(children: [
-                Align(
+                const Align(
                   alignment: AlignmentDirectional.center,
                   child: CircleAvatar(
                     radius: 50,
@@ -56,12 +56,12 @@ class EditInformation extends StatelessWidget {
                   right: 1,
                   left: 3,
                   child: Align(
-                    alignment: Alignment(0.2, 0),
+                    alignment: const Alignment(0.2, 0),
                     child: Container(
                       width: 30,
                       height: 30,
                       color: kPrimaryColor,
-                      child: Icon(
+                      child: const Icon(
                         Icons.camera_alt_outlined,
                         color: Colors.white,
                         size: 17,
@@ -70,38 +70,38 @@ class EditInformation extends StatelessWidget {
                   ),
                 )
               ]),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               CustomTextField(
                 onChange: (data) {},
                 hintText: 'User Name',
               ),
-              SizedBox(
+              const SizedBox(
                 height: 9,
               ),
               CustomTextField(
                 onChange: (data) {},
                 hintText: 'Email',
               ),
-              SizedBox(
+              const SizedBox(
                 height: 9,
               ),
-              IntlPhoneField(
+              const IntlPhoneField(
                 decoration: InputDecoration(
                     labelText: "phoneNumber",
                     border: OutlineInputBorder(
                       borderSide: BorderSide(),
                     )),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 9,
               ),
               CustomTextField(
                 onChange: (data) {},
                 hintText: 'Place',
               ),
-              SizedBox(
+              const SizedBox(
                 height: 18,
               ),
               CustomButton(
