@@ -1,5 +1,6 @@
 import 'package:ettamentest/constant.dart';
-import 'package:ettamentest/modules/app_screens/dashboard.dart';
+import 'package:ettamentest/modules/app_screens/dashboard_screen.dart';
+import 'package:ettamentest/modules/app_screens/search_screen.dart';
 import 'package:flutter/material.dart';
 
 class NavBarRoot extends StatefulWidget {
@@ -13,7 +14,7 @@ class _NavBarRootState extends State<NavBarRoot> {
   int _selectedIndex = 0;
   final _screens = [
     const Dashboard(),
-    Container(),
+    const Search(),
     Container(),
     Container(),
   ];
@@ -29,7 +30,7 @@ class _NavBarRootState extends State<NavBarRoot> {
               // Navigator.of(context).pop();
             },
           ),
-          title: Row(
+          title: const Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               CircleAvatar(

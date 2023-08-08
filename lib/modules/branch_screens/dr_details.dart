@@ -160,7 +160,7 @@ class DrDetails extends StatelessWidget {
               ),
               const ListTile(
                 title: Text(
-                  'Address',
+                  'Location',
                   style: TextStyle(
                       fontFamily: kFont,
                       fontSize: 14,

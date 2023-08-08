@@ -120,9 +120,9 @@ class welcomeScreen extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                               builder: (context) =>
-                                  PhoneVerify()
-                                  // EditInformation()
-                                  // AdvertisementLogo()
+                                  // PhoneVerify()
+                                  EditInformation()
+                              // AdvertisementLogo()
                               // ChiropractorScreen()
                               ),
                         );
