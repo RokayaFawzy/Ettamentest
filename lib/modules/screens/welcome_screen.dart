@@ -14,6 +14,7 @@ import '../components/item.dart';
 import '../design_screens/branch_reset.dart';
 import '../widgets/advertisement.dart';
 import '../widgets/categories_item.dart';
+import '../widgets/diseases_contaner.dart';
 import '../widgets/dr_card.dart';
 import '../widgets/dr_infor_card.dart';
 
@@ -121,10 +122,10 @@ class welcomeScreen extends StatelessWidget {
                           MaterialPageRoute(
                               builder: (context) =>
                                   // PhoneVerify()
-                                  EditInformation()
-                              // AdvertisementLogo()
-                              // ChiropractorScreen()
-                              ),
+                                  // EditInformation()
+                                  // AdvertisementLogo()
+                                  // ChiropractorScreen()
+                                  Diseases_contaner()),
                         );
                         //
                       },

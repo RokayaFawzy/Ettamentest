@@ -79,7 +79,7 @@ class _NavBarRootState extends State<NavBarRoot> {
             BottomNavigationBarItem(
                 icon: Icon(Icons.person_search_outlined), label: "SEARCH"),
             BottomNavigationBarItem(
-                icon: Icon(Icons.notifications), label: "NOTIFICATIONS"),
+                icon: Icon(Icons.notifications_none), label: "NOTIFICATIONS"),
             BottomNavigationBarItem(
                 icon: Icon(Icons.chat_bubble_outline), label: "INBOX"),
           ],
