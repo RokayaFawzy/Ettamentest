@@ -1,4 +1,5 @@
 import 'package:ettamentest/constant.dart';
+import 'package:ettamentest/modules/app_screens/widget_dashboard/list_row_majors.dart';
 import 'package:ettamentest/modules/design_screens/first_screen.dart';
 import 'package:ettamentest/modules/screens/login_screen.dart';
 import 'package:ettamentest/modules/screens/profile_screen.dart';
@@ -12,7 +13,7 @@ import '../branch_screens/dr_details.dart';
 import '../branch_screens/edit_Info.dart';
 import '../components/item.dart';
 import '../design_screens/branch_reset.dart';
-import '../widgets/advertisement.dart';
+import '../app_screens/widget_dashboard/advertisement.dart';
 import '../widgets/categories_item.dart';
 import '../widgets/diseases_contaner.dart';
 import '../widgets/dr_card.dart';
@@ -120,12 +121,15 @@ class welcomeScreen extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) =>
-                                  // PhoneVerify()
-                                  // EditInformation()
-                                  // AdvertisementLogo()
-                                  // ChiropractorScreen()
-                                  Diseases_contaner()),
+                            builder: (context) =>
+                                // PhoneVerify()
+                                // EditInformation()
+                                // AdvertisementLogo()
+                                // ChiropractorScreen()
+                                // ListRowMajors(),
+                                // AdvertisementLogo(),
+                                ChiropractorScreen(),
+                          ),
                         );
                         //
                       },

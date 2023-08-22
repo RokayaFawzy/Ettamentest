@@ -32,6 +32,7 @@ class _Diseases_contanerState extends State<Diseases_contaner> {
                             Align(
                               alignment: Alignment(0.03, -0.38),
                               child: Image.asset("assets/images/heart (1).png"),
+                              
                             ),
                             Align(
                               alignment: Alignment(0.2, 0.5),

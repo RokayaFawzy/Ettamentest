@@ -76,8 +76,7 @@ class _NavBarRootState extends State<NavBarRoot> {
           items: const [
             BottomNavigationBarItem(
                 icon: Icon(Icons.dashboard_outlined), label: "DASHBOARD"),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.person_search_outlined), label: "SEARCH"),
+            BottomNavigationBarItem(icon: Icon(Icons.search), label: "SEARCH"),
             BottomNavigationBarItem(
                 icon: Icon(Icons.notifications_none), label: "NOTIFICATIONS"),
             BottomNavigationBarItem(

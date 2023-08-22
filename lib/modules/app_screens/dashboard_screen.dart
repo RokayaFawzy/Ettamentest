@@ -1,4 +1,7 @@
 import 'package:ettamentest/constant.dart';
+import 'package:ettamentest/modules/app_screens/widget_dashboard/list_row_diagnostics.dart';
+import 'package:ettamentest/modules/app_screens/widget_dashboard/list_row_majors.dart';
+import 'package:ettamentest/modules/app_screens/widget_dashboard/advertisement.dart';
 import 'package:ettamentest/modules/widgets/dr_card.dart';
 import 'package:flutter/material.dart';
 
@@ -18,8 +21,7 @@ class _DashboardState extends State<Dashboard> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.white,
-        body: SafeArea(
-            child: ListView(children: const [
+        body: ListView(children: [
           Column(
             children: [
               Divider(
@@ -27,39 +29,45 @@ class _DashboardState extends State<Dashboard> {
                 thickness: 0.1,
                 height: 8,
               ),
-              Padding(
-                padding: EdgeInsets.only(top: 20.0, left: 35, bottom: 20),
-                child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      'My Appointments',
-                      textAlign: TextAlign.left,
-                      style: TextStyle(
-                          fontSize: 16,
-                          color: kPrimaryColor,
-                          fontFamily: kHomeFonts,
-                          fontWeight: FontWeight.w700),
-                    )),
+              SizedBox(height: 20),
+              Container(
+                height: 100,
+                child: ListRowMajors(),
               ),
-              Row(
-                children: [
-                  DateWidget(),
-                  DrCard(),
-                ],
-              ),
+              SizedBox(height: 20),
+              AdvertisementLogo(),
               SizedBox(height: 20),
               Divider(
                 color: kPrimaryColor,
                 thickness: 0.1,
                 height: 8,
               ),
-              //TODO: insert CategoriesItem
-              // CategoriesItem(),
-              //TODO: insert CategoriesItem,
+              SizedBox(height: 20),
               Padding(
-                padding: EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(8.0),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Diagnostics & Tests",
+                      style: TextStyle(
+                          color: kPrimaryColor,
+                          fontSize: 16,
+                          fontFamily: kHomeFonts,
+                          fontWeight: FontWeight.w700,
+                          height: 1.20),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(height: 20),
+              Container(
+                height: 130,
+                child: ListRowDiagnostics(),
+              ),
+              SizedBox(height: 20),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
                   children: [
                     Text(
                       "Top Rated Doctor",
@@ -73,11 +81,13 @@ class _DashboardState extends State<Dashboard> {
                   ],
                 ),
               ),
-              SizedBox(height: 10),
-
-              DrInformationCard(),
+              SizedBox(height: 20),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: DrInformationCard(),
+              ),
             ],
-          )
-        ])));
+          ),
+        ]));
   }
 }
