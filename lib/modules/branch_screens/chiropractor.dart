@@ -1,3 +1,4 @@
+import 'package:ettamentest/modules/app_screens/widget_chiropractor.dart/filters_widget.dart';
 import 'package:flutter/material.dart';
 
 import '../../constant.dart';
@@ -44,7 +45,13 @@ class ChiropractorScreen extends StatelessWidget {
                       IconButton(
                         icon: Image.asset(
                             'assets/images/akar-icons_settings-vertical.png'),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const FiltersScreen()),
+                          );
+                        },
                         iconSize: 1,
                       ),
                       const Text(
@@ -72,7 +79,6 @@ class ChiropractorScreen extends StatelessWidget {
                     ],
                   ),
                   const DrInformationCard(),
-                  
                 ],
               )
             ],

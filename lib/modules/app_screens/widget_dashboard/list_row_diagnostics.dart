@@ -11,19 +11,19 @@ class ListRowDiagnostics extends StatelessWidget {
         padding: EdgeInsets.zero,
         scrollDirection: Axis.horizontal,
         children: [
-          SizedBox(width: 15),
+          const SizedBox(width: 15),
           Container(
-            color: Color(0xff34B6FF),
+            color: const Color(0xff34B6FF),
             width: 110,
             height: 110,
             child: Stack(
               children: [
                 Align(
-                  alignment: Alignment(0.03, -0.38),
+                  alignment: const Alignment(0.03, -0.38),
                   child: Image.asset("assets/images/virus.png"),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 27),
+                const Padding(
+                  padding: EdgeInsets.only(left: 27),
                   child: Align(
                     alignment: Alignment(-0.2, 0.5),
                     child: Text(
@@ -39,19 +39,19 @@ class ListRowDiagnostics extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(width: 13),
+          const SizedBox(width: 13),
           Container(
-            color: Color(0xff18DF80),
+            color: const Color(0xff18DF80),
             width: 110,
             height: 110,
             child: Stack(
               children: [
                 Align(
-                  alignment: Alignment(0.03, -0.38),
+                  alignment: const Alignment(0.03, -0.38),
                   child: Image.asset("assets/images/ultrasound.png"),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 27),
+                const Padding(
+                  padding: EdgeInsets.only(left: 27),
                   child: Align(
                     alignment: Alignment(0.2, 0.5),
                     child: Text(
@@ -67,21 +67,21 @@ class ListRowDiagnostics extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 13,
           ),
           Container(
-            color: Color(0xffF5B715),
+            color: const Color(0xffF5B715),
             width: 110,
             height: 110,
             child: Stack(
               children: [
                 Align(
-                  alignment: Alignment(0.03, -0.38),
+                  alignment: const Alignment(0.03, -0.38),
                   child: Image.asset("assets/images/dna-structure.png"),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
+                const Padding(
+                  padding: EdgeInsets.all(8.0),
                   child: Align(
                     alignment: Alignment(0.2, 0.5),
                     child: Text(
@@ -97,19 +97,19 @@ class ListRowDiagnostics extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(width: 13),
+          const SizedBox(width: 13),
           Container(
-            color: Color(0xffF84C6B),
+            color: const Color(0xffF84C6B),
             width: 110,
             height: 110,
             child: Stack(
               children: [
                 Align(
-                  alignment: Alignment(0.03, -0.38),
+                  alignment: const Alignment(0.03, -0.38),
                   child: Image.asset("assets/images/heart-beat.png"),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
+                const Padding(
+                  padding: EdgeInsets.all(8.0),
                   child: Align(
                     alignment: Alignment(0.2, 0.5),
                     child: Text(
@@ -125,21 +125,21 @@ class ListRowDiagnostics extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 13,
           ),
           Container(
-            color: Color(0xff34B6FF),
+            color: const Color(0xff34B6FF),
             width: 110,
             height: 110,
             child: Stack(
               children: [
                 Align(
-                  alignment: Alignment(0.03, -0.38),
+                  alignment: const Alignment(0.03, -0.38),
                   child: Image.asset("assets/images/patient.png"),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
+                const Padding(
+                  padding: EdgeInsets.all(5.0),
                   child: Align(
                     alignment: Alignment(0.2, 0.5),
                     child: Text(
@@ -155,7 +155,7 @@ class ListRowDiagnostics extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 13,
           ),
         ],

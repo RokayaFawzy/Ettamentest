@@ -1,5 +1,8 @@
 import 'package:ettamentest/constant.dart';
+import 'package:ettamentest/modules/app_screens/widget_chiropractor.dart/Toggle_rating.dart';
+import 'package:ettamentest/modules/app_screens/widget_chiropractor.dart/filters_widget.dart';
 import 'package:ettamentest/modules/app_screens/widget_dashboard/list_row_majors.dart';
+import 'package:ettamentest/modules/app_screens/widget_chiropractor.dart/toggle_gender.dart';
 import 'package:ettamentest/modules/design_screens/first_screen.dart';
 import 'package:ettamentest/modules/screens/login_screen.dart';
 import 'package:ettamentest/modules/screens/profile_screen.dart';
@@ -128,7 +131,8 @@ class welcomeScreen extends StatelessWidget {
                                 // ChiropractorScreen()
                                 // ListRowMajors(),
                                 // AdvertisementLogo(),
-                                ChiropractorScreen(),
+                                // ChiropractorScreen()
+                                FiltersScreen(),
                           ),
                         );
                         //
