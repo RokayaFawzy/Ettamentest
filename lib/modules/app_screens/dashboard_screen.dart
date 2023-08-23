@@ -1,4 +1,5 @@
 import 'package:ettamentest/constant.dart';
+import 'package:ettamentest/modules/app_screens/widget_dashboard/dash_dr.dart';
 import 'package:ettamentest/modules/app_screens/widget_dashboard/list_row_diagnostics.dart';
 import 'package:ettamentest/modules/app_screens/widget_dashboard/list_row_majors.dart';
 import 'package:ettamentest/modules/app_screens/widget_dashboard/advertisement.dart';
@@ -24,27 +25,50 @@ class _DashboardState extends State<Dashboard> {
         body: ListView(children: [
           Column(
             children: [
-              Divider(
+              const Divider(
                 color: kPrimaryColor,
                 thickness: 0.1,
                 height: 8,
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Container(
                 height: 100,
-                child: ListRowMajors(),
+                child: const ListRowMajors(),
               ),
-              SizedBox(height: 20),
-              AdvertisementLogo(),
-              SizedBox(height: 20),
-              Divider(
+              const SizedBox(height: 20),
+              const AdvertisementLogo(),
+              const SizedBox(height: 20),
+              const Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Row(
+                  children: [
+                    Text(
+                      "My Appointments",
+                      style: TextStyle(
+                          color: kPrimaryColor,
+                          fontSize: 16,
+                          fontFamily: kHomeFonts,
+                          fontWeight: FontWeight.w700,
+                          height: 1.20),
+                    ),
+                  ],
+                ),
+              ),
+              const Row(
+                children: [
+                  DateWidget(),
+                  DashboardDrCard(),
+                ],
+              ),
+              const SizedBox(height: 20),
+              const Divider(
                 color: kPrimaryColor,
                 thickness: 0.1,
                 height: 8,
               ),
-              SizedBox(height: 20),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
+              const SizedBox(height: 20),
+              const Padding(
+                padding: EdgeInsets.all(8.0),
                 child: Row(
                   children: [
                     Text(
@@ -59,14 +83,14 @@ class _DashboardState extends State<Dashboard> {
                   ],
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Container(
                 height: 130,
-                child: ListRowDiagnostics(),
+                child: const ListRowDiagnostics(),
               ),
-              SizedBox(height: 20),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
+              const SizedBox(height: 20),
+              const Padding(
+                padding: EdgeInsets.all(8.0),
                 child: Row(
                   children: [
                     Text(
@@ -81,9 +105,9 @@ class _DashboardState extends State<Dashboard> {
                   ],
                 ),
               ),
-              SizedBox(height: 20),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
+              const SizedBox(height: 20),
+              const Padding(
+                padding: EdgeInsets.all(8.0),
                 child: DrInformationCard(),
               ),
             ],

@@ -1,14 +1,15 @@
 import 'package:ettamentest/constant.dart';
+import 'package:ettamentest/modules/branch_screens/chiropractor.dart';
 import 'package:flutter/material.dart';
 
-class Diseases_contaner extends StatefulWidget {
-  const Diseases_contaner({super.key});
+class DiseasesSearch extends StatefulWidget {
+  const DiseasesSearch({super.key});
 
   @override
-  State<Diseases_contaner> createState() => _Diseases_contanerState();
+  State<DiseasesSearch> createState() => _DiseasesSearchState();
 }
 
-class _Diseases_contanerState extends State<Diseases_contaner> {
+class _DiseasesSearchState extends State<DiseasesSearch> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -31,10 +32,21 @@ class _Diseases_contanerState extends State<Diseases_contaner> {
                           children: [
                             Align(
                               alignment: Alignment(0.03, -0.38),
-                              child: Image.asset("assets/images/heart (1).png"),
-                              
+                              child: IconButton(
+                                icon:
+                                    Image.asset("assets/images/heart (1).png"),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const ChiropractorScreen()),
+                                  );
+                                },
+                                iconSize: 1,
+                              ),
                             ),
-                            Align(
+                            const Align(
                               alignment: Alignment(0.2, 0.5),
                               child: Text(
                                 'Cardiology',
@@ -48,7 +60,7 @@ class _Diseases_contanerState extends State<Diseases_contaner> {
                           ],
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 12,
                       ),
                       Container(
@@ -58,10 +70,21 @@ class _Diseases_contanerState extends State<Diseases_contaner> {
                         child: Stack(
                           children: [
                             Align(
-                              alignment: Alignment(0.03, -0.38),
-                              child: Image.asset("assets/images/baby (1).png"),
+                              alignment: const Alignment(0.03, -0.38),
+                              child: IconButton(
+                                icon: Image.asset("assets/images/baby (1).png"),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const ChiropractorScreen()),
+                                  );
+                                },
+                                iconSize: 1,
+                              ),
                             ),
-                            Align(
+                            const Align(
                               alignment: Alignment(0.2, 0.5),
                               child: Text(
                                 'Gynecology',
@@ -75,7 +98,7 @@ class _Diseases_contanerState extends State<Diseases_contaner> {
                           ],
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 12,
                       ),
                       Container(
@@ -85,11 +108,22 @@ class _Diseases_contanerState extends State<Diseases_contaner> {
                         child: Stack(
                           children: [
                             Align(
-                              alignment: Alignment(0.03, -0.38),
-                              child: Image.asset(
-                                  "assets/images/hypoallergenic (1).png"),
+                              alignment: const Alignment(0.03, -0.38),
+                              child: IconButton(
+                                icon: Image.asset(
+                                    "assets/images/hypoallergenic (1).png"),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const ChiropractorScreen()),
+                                  );
+                                },
+                                iconSize: 1,
+                              ),
                             ),
-                            Align(
+                            const Align(
                               alignment: Alignment(0.2, 0.5),
                               child: Text(
                                 'Allergists',
@@ -115,11 +149,22 @@ class _Diseases_contanerState extends State<Diseases_contaner> {
                         child: Stack(
                           children: [
                             Align(
-                              alignment: Alignment(0.03, -0.38),
-                              child: Image.asset(
-                                  "assets/images/tooth (1) (1).png"),
+                              alignment: const Alignment(0.03, -0.38),
+                              child: IconButton(
+                                icon: Image.asset(
+                                    "assets/images/tooth (1) (1).png"),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const ChiropractorScreen()),
+                                  );
+                                },
+                                iconSize: 1,
+                              ),
                             ),
-                            Align(
+                            const Align(
                               alignment: Alignment(0.2, 0.5),
                               child: Text(
                                 'Dentistry',
@@ -133,7 +178,7 @@ class _Diseases_contanerState extends State<Diseases_contaner> {
                           ],
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 12,
                       ),
                       Container(
@@ -143,11 +188,22 @@ class _Diseases_contanerState extends State<Diseases_contaner> {
                         child: Stack(
                           children: [
                             Align(
-                              alignment: Alignment(0.03, -0.38),
-                              child:
-                                  Image.asset("assets/images/kidney (1).png"),
+                              alignment: const Alignment(0.03, -0.38),
+                              child: IconButton(
+                                icon:
+                                    Image.asset("assets/images/kidney (1).png"),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const ChiropractorScreen()),
+                                  );
+                                },
+                                iconSize: 1,
+                              ),
                             ),
-                            Align(
+                            const Align(
                               alignment: Alignment(0.2, 0.5),
                               child: Text(
                                 'Nephrology',
@@ -161,7 +217,7 @@ class _Diseases_contanerState extends State<Diseases_contaner> {
                           ],
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 12,
                       ),
                       Container(
@@ -172,10 +228,21 @@ class _Diseases_contanerState extends State<Diseases_contaner> {
                           children: [
                             Align(
                               alignment: Alignment(0.03, -0.38),
-                              child: Image.asset(
-                                  "assets/images/cancer-cell (1).png"),
+                              child: IconButton(
+                                icon: Image.asset(
+                                    "assets/images/cancer-cell (1).png"),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const ChiropractorScreen()),
+                                  );
+                                },
+                                iconSize: 1,
+                              ),
                             ),
-                            Align(
+                            const Align(
                               alignment: Alignment(0.2, 0.5),
                               child: Text(
                                 'Oncology',
@@ -201,11 +268,22 @@ class _Diseases_contanerState extends State<Diseases_contaner> {
                         child: Stack(
                           children: [
                             Align(
-                              alignment: Alignment(0.03, -0.38),
-                              child:
-                                  Image.asset("assets/images/ear-plug (1).png"),
+                              alignment: const Alignment(0.03, -0.38),
+                              child: IconButton(
+                                icon: Image.asset(
+                                    "assets/images/ear-plug (1).png"),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const ChiropractorScreen()),
+                                  );
+                                },
+                                iconSize: 1,
+                              ),
                             ),
-                            Align(
+                            const Align(
                               alignment: Alignment(0.2, 0.5),
                               child: Text(
                                 'Otolaryngology',
@@ -219,7 +297,7 @@ class _Diseases_contanerState extends State<Diseases_contaner> {
                           ],
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 12,
                       ),
                       Container(
@@ -229,11 +307,22 @@ class _Diseases_contanerState extends State<Diseases_contaner> {
                         child: Stack(
                           children: [
                             Align(
-                              alignment: Alignment(0.03, -0.38),
-                              child:
-                                  Image.asset("assets/images/eye-bags (1).png"),
+                              alignment: const Alignment(0.03, -0.38),
+                              child: IconButton(
+                                icon: Image.asset(
+                                    "assets/images/eye-bags (1).png"),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const ChiropractorScreen()),
+                                  );
+                                },
+                                iconSize: 1,
+                              ),
                             ),
-                            Align(
+                            const Align(
                               alignment: Alignment(0.2, 0.5),
                               child: Text(
                                 'Ophthalmology',
@@ -247,7 +336,7 @@ class _Diseases_contanerState extends State<Diseases_contaner> {
                           ],
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 12,
                       ),
                       Container(
@@ -257,11 +346,21 @@ class _Diseases_contanerState extends State<Diseases_contaner> {
                         child: Stack(
                           children: [
                             Align(
-                              alignment: Alignment(0.03, -0.38),
+                              alignment: const Alignment(0.03, -0.38),
                               child:
-                                  Image.asset("assets/images/amnesia (1).png"),
+                                 IconButton(
+                    icon: Image.asset("assets/images/amnesia (1).png"),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ChiropractorScreen()),
+                      );
+                    },
+                    iconSize: 1,
+                  ),
                             ),
-                            Align(
+                            const Align(
                               alignment: Alignment(0.2, 0.5),
                               child: Text(
                                 'Neurology',

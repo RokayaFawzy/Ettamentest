@@ -107,9 +107,9 @@ class DrCard extends StatelessWidget {
             child: ElevatedButton(
               onPressed: () {},
               style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xFF18DF80),
+                  backgroundColor: const Color(0xFF18DF80),
                   elevation: 0,
-                  shape: BeveledRectangleBorder(
+                  shape: const BeveledRectangleBorder(
                       borderRadius:
                           BorderRadius.horizontal(left: Radius.zero))),
               child: const Text(

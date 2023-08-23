@@ -23,7 +23,7 @@ class DrInformationCard extends StatelessWidget {
                       child: Image.asset('assets/images/images.jpeg',
                           fit: BoxFit.cover)),
                   Container(
-                    padding: EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                    padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                     color: Colors.grey,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -35,20 +35,20 @@ class DrInformationCard extends StatelessWidget {
                           color: Colors.amber[800],
                           size: 15,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
-                        Text("5,0"),
+                        const Text("5,0"),
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 2,
                   ),
                 ],
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
+              const Padding(
+                padding: EdgeInsets.all(8.0),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -91,11 +91,11 @@ class DrInformationCard extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.star_border_purple500_outlined,
                     size: 20,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 35,
                   ),
                   ElevatedButton(
@@ -108,7 +108,7 @@ class DrInformationCard extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                         backgroundColor: kPrimaryColor,
                         elevation: 0,
-                        shape: BeveledRectangleBorder(
+                        shape: const BeveledRectangleBorder(
                             borderRadius:
                                 BorderRadius.horizontal(left: Radius.zero))),
                     child: const Text(
@@ -119,10 +119,10 @@ class DrInformationCard extends StatelessWidget {
                 ],
               ),
             ]),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
-            Divider(
+            const Divider(
               color: kPrimaryColor,
               thickness: 0.1,
               height: 9,

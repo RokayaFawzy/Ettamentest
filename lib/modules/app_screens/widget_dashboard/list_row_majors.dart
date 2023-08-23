@@ -1,4 +1,5 @@
 import 'package:ettamentest/constant.dart';
+import 'package:ettamentest/modules/branch_screens/chiropractor.dart';
 import 'package:flutter/material.dart';
 
 class ListRowMajors extends StatelessWidget {
@@ -11,7 +12,7 @@ class ListRowMajors extends StatelessWidget {
         padding: EdgeInsets.zero,
         scrollDirection: Axis.horizontal,
         children: [
-          SizedBox(width: 15),
+          const SizedBox(width: 15),
           Container(
             color: kCardColor,
             width: 82,
@@ -19,10 +20,20 @@ class ListRowMajors extends StatelessWidget {
             child: Stack(
               children: [
                 Align(
-                  alignment: Alignment(0.03, -0.38),
-                  child: Image.asset("assets/images/heart (1).png"),
+                  alignment: const Alignment(0.03, -0.38),
+                  child: IconButton(
+                    icon: Image.asset("assets/images/heart (1).png"),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ChiropractorScreen()),
+                      );
+                    },
+                    iconSize: 1,
+                  ),
                 ),
-                Align(
+                const Align(
                   alignment: Alignment(0.2, 0.5),
                   child: Text(
                     'Cardiology',
@@ -36,7 +47,7 @@ class ListRowMajors extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(width: 13),
+          const SizedBox(width: 13),
           Container(
             color: kCardColor,
             width: 82,
@@ -44,10 +55,20 @@ class ListRowMajors extends StatelessWidget {
             child: Stack(
               children: [
                 Align(
-                  alignment: Alignment(0.03, -0.38),
-                  child: Image.asset("assets/images/baby (1).png"),
+                  alignment: const Alignment(0.03, -0.38),
+                  child: IconButton(
+                    icon: Image.asset("assets/images/baby (1).png"),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ChiropractorScreen()),
+                      );
+                    },
+                    iconSize: 1,
+                  ),
                 ),
-                Align(
+                const Align(
                   alignment: Alignment(0.2, 0.5),
                   child: Text(
                     'Gynecology',
@@ -61,9 +82,7 @@ class ListRowMajors extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
-            width: 13,
-          ),
+          const SizedBox(width: 13),
           Container(
             color: kCardColor,
             width: 82,
@@ -71,10 +90,20 @@ class ListRowMajors extends StatelessWidget {
             child: Stack(
               children: [
                 Align(
-                  alignment: Alignment(0.03, -0.38),
-                  child: Image.asset("assets/images/hypoallergenic (1).png"),
+                  alignment: const Alignment(0.03, -0.38),
+                  child: IconButton(
+                    icon: Image.asset("assets/images/hypoallergenic (1).png"),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ChiropractorScreen()),
+                      );
+                    },
+                    iconSize: 1,
+                  ),
                 ),
-                Align(
+                const Align(
                   alignment: Alignment(0.2, 0.5),
                   child: Text(
                     'Allergists',
@@ -88,7 +117,7 @@ class ListRowMajors extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(width: 13),
+          const SizedBox(width: 13),
           Container(
             color: kCardColor,
             width: 82,
@@ -96,10 +125,20 @@ class ListRowMajors extends StatelessWidget {
             child: Stack(
               children: [
                 Align(
-                  alignment: Alignment(0.03, -0.38),
-                  child: Image.asset("assets/images/tooth (1) (1).png"),
+                  alignment: const Alignment(0.03, -0.38),
+                  child: IconButton(
+                    icon: Image.asset("assets/images/tooth (1) (1).png"),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ChiropractorScreen()),
+                      );
+                    },
+                    iconSize: 1,
+                  ),
                 ),
-                Align(
+                const Align(
                   alignment: Alignment(0.2, 0.5),
                   child: Text(
                     'Dentistry',
@@ -113,7 +152,7 @@ class ListRowMajors extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 13,
           ),
           Container(
@@ -123,10 +162,20 @@ class ListRowMajors extends StatelessWidget {
             child: Stack(
               children: [
                 Align(
-                  alignment: Alignment(0.03, -0.38),
-                  child: Image.asset("assets/images/kidney (1).png"),
+                  alignment: const Alignment(0.03, -0.38),
+                  child: IconButton(
+                    icon: Image.asset("assets/images/kidney (1).png"),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ChiropractorScreen()),
+                      );
+                    },
+                    iconSize: 1,
+                  ),
                 ),
-                Align(
+                const Align(
                   alignment: Alignment(0.2, 0.5),
                   child: Text(
                     'Nephrology',
@@ -140,7 +189,7 @@ class ListRowMajors extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 13,
           ),
           Container(
@@ -150,10 +199,20 @@ class ListRowMajors extends StatelessWidget {
             child: Stack(
               children: [
                 Align(
-                  alignment: Alignment(0.03, -0.38),
-                  child: Image.asset("assets/images/cancer-cell (1).png"),
+                  alignment: const Alignment(0.03, -0.38),
+                  child: IconButton(
+                    icon: Image.asset("assets/images/cancer-cell (1).png"),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ChiropractorScreen()),
+                      );
+                    },
+                    iconSize: 1,
+                  ),
                 ),
-                Align(
+                const Align(
                   alignment: Alignment(0.2, 0.5),
                   child: Text(
                     'Oncology',
@@ -167,7 +226,7 @@ class ListRowMajors extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 13,
           ),
           Container(
@@ -177,10 +236,20 @@ class ListRowMajors extends StatelessWidget {
             child: Stack(
               children: [
                 Align(
-                  alignment: Alignment(0.03, -0.38),
-                  child: Image.asset("assets/images/ear-plug (1).png"),
+                  alignment: const Alignment(0.03, -0.38),
+                  child: IconButton(
+                    icon: Image.asset("assets/images/ear-plug (1).png"),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ChiropractorScreen()),
+                      );
+                    },
+                    iconSize: 1,
+                  ),
                 ),
-                Align(
+                const Align(
                   alignment: Alignment(0.2, 0.5),
                   child: Text(
                     'Otolaryngology',
@@ -194,7 +263,7 @@ class ListRowMajors extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 13,
           ),
           Container(
@@ -204,10 +273,20 @@ class ListRowMajors extends StatelessWidget {
             child: Stack(
               children: [
                 Align(
-                  alignment: Alignment(0.03, -0.38),
-                  child: Image.asset("assets/images/eye-bags (1).png"),
+                  alignment: const Alignment(0.03, -0.38),
+                  child: IconButton(
+                    icon: Image.asset("assets/images/eye-bags (1).png"),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ChiropractorScreen()),
+                      );
+                    },
+                    iconSize: 1,
+                  ),
                 ),
-                Align(
+                const Align(
                   alignment: Alignment(0.2, 0.5),
                   child: Text(
                     'Ophthalmology',
@@ -221,7 +300,7 @@ class ListRowMajors extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 13,
           ),
           Container(
@@ -231,10 +310,20 @@ class ListRowMajors extends StatelessWidget {
             child: Stack(
               children: [
                 Align(
-                  alignment: Alignment(0.03, -0.38),
-                  child: Image.asset("assets/images/amnesia (1).png"),
+                  alignment: const Alignment(0.03, -0.38),
+                  child: IconButton(
+                    icon: Image.asset("assets/images/amnesia (1).png"),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ChiropractorScreen()),
+                      );
+                    },
+                    iconSize: 1,
+                  ),
                 ),
-                Align(
+                const Align(
                   alignment: Alignment(0.2, 0.5),
                   child: Text(
                     'Neurology',

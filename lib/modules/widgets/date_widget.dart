@@ -8,35 +8,30 @@ class DateWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width * 0.5,
-      height: MediaQuery.of(context).size.width * 0.5,
+      width: MediaQuery.of(context).size.width * 0.3,
+      height: MediaQuery.of(context).size.width * 0.3,
       padding: const EdgeInsets.all(10),
       child: Container(
           color: kPrimaryColor,
           child: const Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Text(
-                'January',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 12,
-                    height: 1.50,
-                    fontWeight: FontWeight.w600),
-              ),
+              SizedBox(height: 15),
               Text(
                 '21',
                 style: TextStyle(
                     color: Colors.white,
-                    fontSize: 40,
+                    fontSize: 20,
+                    height: 1.50,
                     fontFamily: kHomeFonts,
-                    fontWeight: FontWeight.w700),
+                    fontWeight: FontWeight.w600),
               ),
+              SizedBox(height: 8),
               Text(
-                'at 4:30pm',
+                'January',
                 style: TextStyle(
                     color: Colors.white,
-                    fontSize: 12,
+                    fontSize: 10,
                     height: 1.50,
                     fontWeight: FontWeight.w600),
               )

@@ -20,8 +20,8 @@ class _SearchState extends State<Search> {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 27.0),
+            const Padding(
+              padding: EdgeInsets.only(left: 27.0),
               child: Text(
                 "Search ",
                 style: TextStyle(
@@ -31,7 +31,7 @@ class _SearchState extends State<Search> {
                     color: kPrimaryColor),
               ),
             ),
-            SizedBox(height: 12),
+            const SizedBox(height: 12),
             Center(
               child: Container(
                 width: 300,
@@ -41,10 +41,10 @@ class _SearchState extends State<Search> {
                 ),
               ),
             ),
-            Diseases_contaner(),
-            SizedBox(height: 20),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
+            const DiseasesSearch(),
+            const SizedBox(height: 20),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
               child: Row(
                 children: [
                   Text(
@@ -59,12 +59,12 @@ class _SearchState extends State<Search> {
                 ],
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Container(
               height: 130,
-              child: ListRowDiagnostics(),
+              child: const ListRowDiagnostics(),
             ),
-            SizedBox(height: 100),
+            const SizedBox(height: 100),
           ],
         ),
       ]),

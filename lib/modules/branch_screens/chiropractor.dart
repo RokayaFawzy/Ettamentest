@@ -4,7 +4,7 @@ import '../../constant.dart';
 import '../widgets/dr_infor_card.dart';
 
 class ChiropractorScreen extends StatelessWidget {
-  ChiropractorScreen({super.key});
+  const ChiropractorScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -47,17 +47,17 @@ class ChiropractorScreen extends StatelessWidget {
                         onPressed: () {},
                         iconSize: 1,
                       ),
-                      Text(
+                      const Text(
                         "Filters",
                         style: TextStyle(
                             color: Color(0xFF4B667F),
                             fontSize: 14,
                             fontWeight: FontWeight.w400),
                       ),
-                      Spacer(
+                      const Spacer(
                         flex: 2,
                       ),
-                      Text(
+                      const Text(
                         "Sorting by",
                         style: TextStyle(
                             color: Color(0xFF4B667F),
@@ -71,7 +71,7 @@ class ChiropractorScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  DrInformationCard(),
+                  const DrInformationCard(),
                   
                 ],
               )
