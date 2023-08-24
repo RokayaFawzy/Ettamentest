@@ -1,11 +1,41 @@
 import 'package:ettamentest/modules/app_screens/widget_chiropractor.dart/filters_widget.dart';
+import 'package:ettamentest/modules/app_screens/widget_chiropractor.dart/toggle_sorted_by.dart';
 import 'package:flutter/material.dart';
 
 import '../../constant.dart';
 import '../widgets/dr_infor_card.dart';
 
-class ChiropractorScreen extends StatelessWidget {
+class ChiropractorScreen extends StatefulWidget {
   const ChiropractorScreen({super.key});
+
+  @override
+  State<ChiropractorScreen> createState() => _ChiropractorScreenState();
+}
+
+class _ChiropractorScreenState extends State<ChiropractorScreen> {
+  List<String> _selectedItem = [];
+
+  void _showMultiSelect() async {
+    final List<String> items = [
+      'Price: low to high',
+      'Price: high to low',
+      'Customer rating',
+      'Most popular'
+    ];
+    final List<String>? results = await showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return MultiSelect(
+          items: items,
+        );
+      },
+    );
+    if (results != null) {
+      setState(() {
+        _selectedItem = results;
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +79,8 @@ class ChiropractorScreen extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const FiltersScreen()),
+                              builder: (context) => FiltersScreen(),
+                            ),
                           );
                         },
                         iconSize: 1,
@@ -73,7 +104,7 @@ class ChiropractorScreen extends StatelessWidget {
                       ),
                       IconButton(
                         icon: Image.asset('assets/images/chevron-right.jpg'),
-                        onPressed: () {},
+                        onPressed: _showMultiSelect,
                         iconSize: 1,
                       ),
                     ],
@@ -88,3 +119,53 @@ class ChiropractorScreen extends StatelessWidget {
     );
   }
 }
+
+// class MultiSelect extends StatefulWidget {
+//   final List<String> items;
+//   const MultiSelect({super.key, required this.items});
+
+//   @override
+//   State<MultiSelect> createState() => _MultiSelectState();
+// }
+
+// class _MultiSelectState extends State<MultiSelect> {
+//   final List<String> _selectedItems = [];
+//   void _itemChange(String itemValue, bool isSelected) {
+//     setState(() {
+//       if (isSelected) {
+//         _selectedItems.add(itemValue);
+//       } else {
+//         _selectedItems.remove(itemValue);
+//       }
+//     });
+//   }
+
+//   void _cancel() {
+//     Navigator.pop(context);
+//   }
+
+//   void _submit() {
+//     Navigator.pop(context, _selectedItems);
+//   }
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return AlertDialog(
+//       title: const Text("Sorting by"),
+//       content: SingleChildScrollView(
+//         child: ListBody(
+//           children: widget.items
+//               .map(
+//                 (item) => CheckboxListTile(
+//                   value: _selectedItems.contains(item),
+//                   title: Text(item),
+//                   controlAffinity: ListTileControlAffinity.leading,
+//                   onChanged: (isChecked) => _itemChange(item, isChecked!),
+//                 ),
+//               )
+//               .toList(),
+//         ),
+//       ),
+//     );
+//   }
+// }

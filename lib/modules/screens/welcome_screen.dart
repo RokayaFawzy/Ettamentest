@@ -1,6 +1,7 @@
 import 'package:ettamentest/constant.dart';
 import 'package:ettamentest/modules/app_screens/widget_chiropractor.dart/Toggle_rating.dart';
 import 'package:ettamentest/modules/app_screens/widget_chiropractor.dart/filters_widget.dart';
+import 'package:ettamentest/modules/app_screens/widget_chiropractor.dart/toggle_hours_checkbox.dart';
 import 'package:ettamentest/modules/app_screens/widget_dashboard/list_row_majors.dart';
 import 'package:ettamentest/modules/app_screens/widget_chiropractor.dart/toggle_gender.dart';
 import 'package:ettamentest/modules/design_screens/first_screen.dart';
@@ -12,15 +13,6 @@ import 'package:flutter/material.dart';
 
 import '../app_screens/navbar_root.dart';
 import '../branch_screens/chiropractor.dart';
-import '../branch_screens/dr_details.dart';
-import '../branch_screens/edit_Info.dart';
-import '../components/item.dart';
-import '../design_screens/branch_reset.dart';
-import '../app_screens/widget_dashboard/advertisement.dart';
-import '../widgets/categories_item.dart';
-import '../widgets/diseases_contaner.dart';
-import '../widgets/dr_card.dart';
-import '../widgets/dr_infor_card.dart';
 
 class welcomeScreen extends StatelessWidget {
   const welcomeScreen({super.key});
@@ -132,6 +124,7 @@ class welcomeScreen extends StatelessWidget {
                                 // ListRowMajors(),
                                 // AdvertisementLogo(),
                                 // ChiropractorScreen()
+                                // AvailableHoursCheckbox(),
                                 FiltersScreen(),
                           ),
                         );

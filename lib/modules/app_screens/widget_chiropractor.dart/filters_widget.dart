@@ -1,6 +1,7 @@
 import 'package:ettamentest/constant.dart';
 import 'package:ettamentest/modules/app_screens/widget_chiropractor.dart/Toggle_rating.dart';
 import 'package:ettamentest/modules/app_screens/widget_chiropractor.dart/toggle_gender.dart';
+import 'package:ettamentest/modules/app_screens/widget_chiropractor.dart/toggle_hours_checkbox.dart';
 import 'package:ettamentest/modules/branch_screens/edit_Info.dart';
 import 'package:ettamentest/modules/screens/login_screen.dart';
 import 'package:ettamentest/modules/widgets/custom_botton.dart';
@@ -87,6 +88,25 @@ class FiltersScreen extends StatelessWidget {
                       ToggleRatingButtons(),
                     ],
                   ),
+                  const SizedBox(height: 10),
+                  const Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Row(
+                      children: [
+                        Text(
+                          "Available Hours",
+                          style: TextStyle(
+                              color: kPrimaryColor,
+                              fontSize: 16,
+                              fontFamily: kHomeFonts,
+                              fontWeight: FontWeight.w600,
+                              height: 1.20),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(child: const AvailableHoursCheckbox()),
+
                   const SizedBox(height: 50),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -103,7 +123,7 @@ class FiltersScreen extends StatelessWidget {
                           },
                           child: const Padding(
                             padding: EdgeInsets.symmetric(
-                                vertical: 20, horizontal: 50),
+                                vertical: 20, horizontal: 53),
                             child: Text(
                               "Reset",
                               style: TextStyle(
@@ -130,7 +150,7 @@ class FiltersScreen extends StatelessWidget {
                           },
                           child: const Padding(
                             padding: EdgeInsets.symmetric(
-                                vertical: 20, horizontal: 50),
+                                vertical: 20, horizontal: 53),
                             child: Text(
                               "Apply",
                               style: TextStyle(
