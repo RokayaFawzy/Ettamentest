@@ -18,21 +18,21 @@ class AdvertisementLogo extends StatelessWidget {
             width: double.infinity,
             height: 200,
           ),
-          SizedBox(height: 6),
+          const SizedBox(height: 6),
           Container(
             padding: const EdgeInsets.all(16.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 12,
                 ),
                 Align(
-                  alignment: Alignment(-0.95, -0.95),
+                  alignment: const Alignment(-0.95, -0.95),
                   child: Container(
                     width: 180,
                     height: 100,
-                    padding: EdgeInsets.all(8),
+                    padding: const EdgeInsets.all(8),
                     child: RichText(
                         text: const TextSpan(children: [
                       TextSpan(
@@ -56,11 +56,11 @@ class AdvertisementLogo extends StatelessWidget {
                     ])),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 22,
                 ),
                 Align(
-                  alignment: Alignment(-0.95, -0.6),
+                  alignment: const Alignment(-0.95, -0.6),
                   child: Container(
                     width: 120,
                     height: 35,

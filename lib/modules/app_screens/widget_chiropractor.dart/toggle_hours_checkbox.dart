@@ -12,18 +12,7 @@ class _AvailableHoursCheckboxState extends State<AvailableHoursCheckbox> {
   final List<String> _selectedItems = [];
 
   List<String> item = ['9 am-12 pm', '12 pm-3 pm', '3 pm-6 pm', '6 pm-9 pm'];
-  // List<bool> checkedItem = [false, false, false, false];
-  // void handleCheckboxChanged(int index, bool value) {
-  //   setState(() {
-  //     for (int i = 0; i < checkedItem.length; i++) {
-  //       if (i == index) {
-  //         checkedItem[i] = value;
-  //       } else {
-  //         checkedItem[i] = false;
-  //       }
-  //     }
-  //   });
-  // }
+
 
   void _itemChange(String itemValue, bool isSelected) {
     setState(() {
@@ -44,7 +33,7 @@ class _AvailableHoursCheckboxState extends State<AvailableHoursCheckbox> {
         String item = entry.value;
 
         return CheckboxListTile(
-          contentPadding: EdgeInsets.only(right: 178),
+          contentPadding: const EdgeInsets.only(right: 178),
           title: Row(
             children: [
               Expanded(
@@ -62,11 +51,7 @@ class _AvailableHoursCheckboxState extends State<AvailableHoursCheckbox> {
           controlAffinity: ListTileControlAffinity.leading,
           value: _selectedItems.contains(item),
           onChanged: (isChecked) => _itemChange(item, isChecked!),
-          //  (bool? value) {
-          //   setState(() {
-          //     handleCheckboxChanged(index, value ?? false);
-          //   });
-          // },
+        
         );
       }).toList(),
     );

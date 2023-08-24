@@ -31,10 +31,12 @@ class DrDetails extends StatelessWidget {
                 child: Stack(
                   alignment: Alignment.bottomRight,
                   children: [
-                    //TODO:make photo fit all the space
-                    Image.asset('assets/images/images.jpeg', fit: BoxFit.cover),
-                    //TODO:make photo fit all the space
-
+                    Image.asset(
+                      'assets/images/images.jpeg',
+                      fit: BoxFit.cover,
+                      width: double.infinity,
+                      height: 200,
+                    ),
                     const Icon(
                       Icons.star,
                       color: Colors.green,

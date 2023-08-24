@@ -37,7 +37,15 @@ class _SingleSelectSortedState extends State<SingleSelectSorted> {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: const Text("Sorting by"),
+      title: const Text(
+        "Sorting by",
+        style: TextStyle(
+            color: kPrimaryColor,
+            fontSize: 16,
+            fontFamily: kHomeFonts,
+            fontWeight: FontWeight.w600,
+            height: 1.20),
+      ),
       content: SingleChildScrollView(
         child: ListBody(
           children: item.asMap().entries.map((entry) {
@@ -45,42 +53,19 @@ class _SingleSelectSortedState extends State<SingleSelectSorted> {
             String item = entry.value;
             return CheckboxListTile(
               value: checkedItem[index],
-
-// value: _selectedItems.contains(item),
-              title: Text(item),
+              title: Text(item,
+                  style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w400,
+                      color: kPrimaryColor.withOpacity(0.8))),
               controlAffinity: ListTileControlAffinity.leading,
               onChanged: (bool? value) {
                 setState(() {
                   handleCheckboxChanged(index, value ?? false);
                 });
               },
-
-// (isChecked) => _itemChange(item, isChecked!),
             );
           }).toList(),
-          // // shrinkWrap: true, // Important to avoid height issues in Column
-          // children: item.asMap().entries.map((entry) {
-          //   int index = entry.key;
-          //   String item = entry.value;
-
-          //   return CheckboxListTile(
-          //     contentPadding: EdgeInsets.only(right: 178),
-          //     title: Text(
-          //       item,
-          //       style: TextStyle(
-          //           fontSize: 14,
-          //           fontWeight: FontWeight.w400,
-          //           color: kPrimaryColor.withOpacity(0.7)),
-          //     ),
-          //     controlAffinity: ListTileControlAffinity.leading,
-          //     value: checkedItem[index],
-          //     onChanged: (bool? value) {
-          //       setState(() {
-          //         handleCheckboxChanged(index, value ?? false);
-          //       });
-          //     },
-          //   );
-          // }).toList(),
         ),
       ),
     );

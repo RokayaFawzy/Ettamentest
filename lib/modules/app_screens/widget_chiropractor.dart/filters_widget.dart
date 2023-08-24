@@ -2,9 +2,6 @@ import 'package:ettamentest/constant.dart';
 import 'package:ettamentest/modules/app_screens/widget_chiropractor.dart/Toggle_rating.dart';
 import 'package:ettamentest/modules/app_screens/widget_chiropractor.dart/toggle_gender.dart';
 import 'package:ettamentest/modules/app_screens/widget_chiropractor.dart/toggle_hours_checkbox.dart';
-import 'package:ettamentest/modules/branch_screens/edit_Info.dart';
-import 'package:ettamentest/modules/screens/login_screen.dart';
-import 'package:ettamentest/modules/widgets/custom_botton.dart';
 import 'package:flutter/material.dart';
 
 // enum Gender { male, female }
@@ -112,7 +109,7 @@ class FiltersScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Material(
-                        color: Color(0xff18DF80),
+                        color: const Color(0xff18DF80),
                         child: InkWell(
                           onTap: () {
                             // Navigator.push(
@@ -165,12 +162,7 @@ class FiltersScreen extends StatelessWidget {
                     ],
                   ),
 
-                  // Row(
-                  //   children: [
-                  //     Expanded(child: CustomButton(text: "text")),
-                  //     const SizedBox(height: 10),
-                  //   ],
-                  // ),
+                
                 ],
               ),
             ),
