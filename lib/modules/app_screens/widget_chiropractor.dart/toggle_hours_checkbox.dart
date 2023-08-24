@@ -9,16 +9,28 @@ class AvailableHoursCheckbox extends StatefulWidget {
 }
 
 class _AvailableHoursCheckboxState extends State<AvailableHoursCheckbox> {
+  final List<String> _selectedItems = [];
+
   List<String> item = ['9 am-12 pm', '12 pm-3 pm', '3 pm-6 pm', '6 pm-9 pm'];
-  List<bool> checkedItem = [false, false, false, false];
-  void handleCheckboxChanged(int index, bool value) {
+  // List<bool> checkedItem = [false, false, false, false];
+  // void handleCheckboxChanged(int index, bool value) {
+  //   setState(() {
+  //     for (int i = 0; i < checkedItem.length; i++) {
+  //       if (i == index) {
+  //         checkedItem[i] = value;
+  //       } else {
+  //         checkedItem[i] = false;
+  //       }
+  //     }
+  //   });
+  // }
+
+  void _itemChange(String itemValue, bool isSelected) {
     setState(() {
-      for (int i = 0; i < checkedItem.length; i++) {
-        if (i == index) {
-          checkedItem[i] = value;
-        } else {
-          checkedItem[i] = false;
-        }
+      if (isSelected) {
+        _selectedItems.add(itemValue);
+      } else {
+        _selectedItems.remove(itemValue);
       }
     });
   }
@@ -35,14 +47,6 @@ class _AvailableHoursCheckboxState extends State<AvailableHoursCheckbox> {
           contentPadding: EdgeInsets.only(right: 178),
           title: Row(
             children: [
-              // Checkbox(
-              //   value: checkedItem[index],
-              //   onChanged: (bool? value) {
-              //     setState(() {
-              //       handleCheckboxChanged(index, value ?? false);
-              //     });
-              //   },
-              // ),
               Expanded(
                 child: Center(
                     child: Text(
@@ -56,12 +60,13 @@ class _AvailableHoursCheckboxState extends State<AvailableHoursCheckbox> {
             ],
           ),
           controlAffinity: ListTileControlAffinity.leading,
-          value: checkedItem[index],
-          onChanged: (bool? value) {
-            setState(() {
-              handleCheckboxChanged(index, value ?? false);
-            });
-          },
+          value: _selectedItems.contains(item),
+          onChanged: (isChecked) => _itemChange(item, isChecked!),
+          //  (bool? value) {
+          //   setState(() {
+          //     handleCheckboxChanged(index, value ?? false);
+          //   });
+          // },
         );
       }).toList(),
     );

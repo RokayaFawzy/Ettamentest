@@ -117,7 +117,7 @@ class welcomeScreen extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) =>
-                                // PhoneVerify()
+                                PhoneVerify()
                                 // EditInformation()
                                 // AdvertisementLogo()
                                 // ChiropractorScreen()
@@ -125,7 +125,6 @@ class welcomeScreen extends StatelessWidget {
                                 // AdvertisementLogo(),
                                 // ChiropractorScreen()
                                 // AvailableHoursCheckbox(),
-                                FiltersScreen(),
                           ),
                         );
                         //

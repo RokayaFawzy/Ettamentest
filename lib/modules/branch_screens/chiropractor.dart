@@ -25,7 +25,7 @@ class _ChiropractorScreenState extends State<ChiropractorScreen> {
     final List<String>? results = await showDialog(
       context: context,
       builder: (BuildContext context) {
-        return MultiSelect(
+        return SingleSelectSorted(
           items: items,
         );
       },
