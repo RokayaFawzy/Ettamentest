@@ -1,18 +1,10 @@
 import 'package:ettamentest/constant.dart';
-import 'package:ettamentest/modules/app_screens/widget_chiropractor.dart/Toggle_rating.dart';
-import 'package:ettamentest/modules/app_screens/widget_chiropractor.dart/filters_widget.dart';
-import 'package:ettamentest/modules/app_screens/widget_chiropractor.dart/toggle_hours_checkbox.dart';
-import 'package:ettamentest/modules/app_screens/widget_dashboard/list_row_majors.dart';
-import 'package:ettamentest/modules/app_screens/widget_chiropractor.dart/toggle_gender.dart';
-import 'package:ettamentest/modules/design_screens/first_screen.dart';
 import 'package:ettamentest/modules/screens/login_screen.dart';
-import 'package:ettamentest/modules/screens/profile_screen.dart';
-import 'package:ettamentest/modules/screens/reset_password.dart';
-import 'package:ettamentest/modules/screens/verify_phone_screen.dart';
+import 'package:ettamentest/modules/app_screens/profile_screen.dart';
+import 'package:ettamentest/modules/widgets/image_row.dart';
+import 'package:ettamentest/modules/widgets/notifications_widget.dart';
 import 'package:flutter/material.dart';
-
 import '../app_screens/navbar_root.dart';
-import '../branch_screens/chiropractor.dart';
 
 class welcomeScreen extends StatelessWidget {
   const welcomeScreen({super.key});
@@ -117,14 +109,8 @@ class welcomeScreen extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) =>
-                                PhoneVerify()
-                                // EditInformation()
-                                // AdvertisementLogo()
-                                // ChiropractorScreen()
-                                // ListRowMajors(),
-                                // AdvertisementLogo(),
-                                // ChiropractorScreen()
-                                // AvailableHoursCheckbox(),
+                                // PhoneVerify()
+                                const ProfileScreen(),
                           ),
                         );
                         //

@@ -1,3 +1,4 @@
+import 'package:ettamentest/modules/branch_screens/read_more.dart';
 import 'package:ettamentest/modules/widgets/custom_botton.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -185,42 +186,48 @@ class DrDetails extends StatelessWidget {
                 height: 15,
               ),
             ]),
-            const Padding(
-              padding: EdgeInsets.all(8.0),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("Biography",
+                  const Text("Biography",
                       style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w700,
                           fontFamily: kHomeFonts,
                           color: kPrimaryColor)),
-                  SizedBox(
-                    height: 9,
-                  ),
-                  Text(
+                  const SizedBox(height: 9),
+                  const Text(
                       "Amet amet Lorem eu consectetur in deserunt nostrud dolor culpa ad sint amet. Nostrud deserunt consectetur culpa minim mollit veniam aliquip pariatur exercitation ullamco ea voluptate et. Pariatur ipsum mollit magna proident nisi ipsum.",
                       style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
                           fontFamily: kFont,
                           color: kPrimaryColor)),
-                  SizedBox(
-                    height: 9,
-                  ),
+                  const SizedBox(height: 9),
                   Row(
                     children: [
-                      Text(
+                      const Text(
                         "Read more",
                         style: TextStyle(
                             fontWeight: FontWeight.w400, color: kPrimaryColor),
                       ),
-                      Icon(
-                        Icons.arrow_forward_ios_sharp,
-                        color: kPrimaryColor,
-                        size: 12,
-                      ),
+                      IconButton(
+                        icon: const Icon(
+                          Icons.arrow_forward_ios_sharp,
+                          color: kPrimaryColor,
+                          size: 12,
+                        ),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ReadMore(),
+                            ),
+                          );
+                        },
+                      )
                     ],
                   )
                 ],

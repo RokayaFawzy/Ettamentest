@@ -1,5 +1,7 @@
 import 'package:ettamentest/constant.dart';
 import 'package:ettamentest/modules/app_screens/dashboard_screen.dart';
+import 'package:ettamentest/modules/app_screens/notification_screen.dart';
+import 'package:ettamentest/modules/app_screens/profile_screen.dart';
 import 'package:ettamentest/modules/app_screens/search_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -15,8 +17,8 @@ class _NavBarRootState extends State<NavBarRoot> {
   final _screens = [
     const Dashboard(),
     const Search(),
-    Container(),
-    Container(),
+    const NotificationsScreen(),
+    const ProfileScreen(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -79,8 +81,7 @@ class _NavBarRootState extends State<NavBarRoot> {
             BottomNavigationBarItem(icon: Icon(Icons.search), label: "SEARCH"),
             BottomNavigationBarItem(
                 icon: Icon(Icons.notifications_none), label: "NOTIFICATIONS"),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.chat_bubble_outline), label: "INBOX"),
+            BottomNavigationBarItem(icon: Icon(Icons.person), label: "PROFILE"),
           ],
         ),
       ),

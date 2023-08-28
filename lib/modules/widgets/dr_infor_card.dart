@@ -1,5 +1,4 @@
 import 'package:ettamentest/constant.dart';
-import 'package:ettamentest/modules/widgets/custom_botton.dart';
 import 'package:flutter/material.dart';
 
 import '../branch_screens/dr_details.dart';
@@ -23,7 +22,8 @@ class DrInformationCard extends StatelessWidget {
                       child: Image.asset('assets/images/images.jpeg',
                           fit: BoxFit.cover)),
                   Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                     color: Colors.grey,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -134,7 +134,3 @@ class DrInformationCard extends StatelessWidget {
     );
   }
 }
-//  Image.asset(
-//                     'assets/images/123.jpg',
-//                     fit: BoxFit.cover,
-//                   )

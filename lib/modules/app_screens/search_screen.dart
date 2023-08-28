@@ -16,10 +16,16 @@ class _SearchState extends State<Search> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: ListView(children: [
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            const Divider(
+              color: kPrimaryColor,
+              thickness: 0.1,
+              height: 8,
+            ),
             const Padding(
               padding: EdgeInsets.only(left: 27.0),
               child: Text(
