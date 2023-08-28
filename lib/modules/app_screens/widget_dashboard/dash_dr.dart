@@ -1,5 +1,6 @@
 import 'package:ettamentest/constant.dart';
 import 'package:ettamentest/modules/branch_screens/dr_details.dart';
+import 'package:ettamentest/modules/branch_screens/edit_dr_appointment.dart';
 import 'package:ettamentest/modules/widgets/custom_botton.dart';
 import 'package:flutter/material.dart';
 
@@ -135,14 +136,23 @@ void _showDialog(BuildContext context) {
                       width: 100,
                       child: CustomButton(
                         text: "Edit",
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const EditDrAppointment(),
+                            ),
+                          );
+                        },
                       )),
-                  SizedBox(width: 30),
+                  const SizedBox(width: 30),
                   Container(
                       width: 100,
                       child: CustomButton(
                         text: "Cancel",
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.of(context).pop();
+                        },
                       )),
                 ],
               ),
