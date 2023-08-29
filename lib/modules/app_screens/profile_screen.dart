@@ -1,7 +1,7 @@
-import 'package:ettamentest/modules/app_screens/widget_dashboard/dash_dr.dart';
 import 'package:ettamentest/modules/branch_screens/edit_Info.dart';
 import 'package:ettamentest/modules/screens/welcome_screen.dart';
-import 'package:ettamentest/modules/widgets/date_widget.dart';
+import 'package:ettamentest/modules/widgets/my_appointment_widget.dart';
+import 'package:ettamentest/modules/widgets/personal_info_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -80,7 +80,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   color: kPrimaryColor,
                   size: 10,
                 ),
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const PersonalInformation(),
+                    ),
+                  );
+                },
               ),
               const Divider(
                 color: kTextfield,
@@ -89,44 +96,40 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 endIndent: 15,
                 height: 15,
               ),
-              const Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Row(
-                  children: [
-                    Text(
-                      "My appointments",
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w500,
-                          fontFamily: kHomeFonts,
-                          color: kPrimaryColor),
-                    ),
-                  ],
+              ListTile(
+                title: const Text(
+                  'My appointment',
+                  style: TextStyle(
+                    fontFamily: kFont,
+                    fontSize: 14,
+                    color: kPrimaryColor,
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
+                leading: const Icon(
+                  Icons.calendar_today_outlined,
+                  color: kIconcolor,
+                ),
+                trailing: const Icon(
+                  Icons.arrow_forward_ios_sharp,
+                  color: kPrimaryColor,
+                  size: 10,
+                ),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const MyAppointments(),
+                    ),
+                  );
+                },
               ),
-              const Row(
-                children: [
-                  DateWidget(),
-                  DashboardDrCard(),
-                ],
-              ),
-              const Row(
-                children: [
-                  DateWidget(),
-                  DashboardDrCard(),
-                ],
-              ),
-              const Row(
-                children: [
-                  DateWidget(),
-                  DashboardDrCard(),
-                ],
-              ),
-              const Row(
-                children: [
-                  DateWidget(),
-                  DashboardDrCard(),
-                ],
+              const Divider(
+                color: kTextfield,
+                thickness: 0.4,
+                indent: 15,
+                endIndent: 15,
+                height: 15,
               ),
               ListTile(
                 title: const Text(
