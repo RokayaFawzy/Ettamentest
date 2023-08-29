@@ -36,7 +36,7 @@ class MyAppointments extends StatelessWidget {
       body: SafeArea(
         child: ListView(
           shrinkWrap: true,
-          children: [
+          children: const [
             Column(
               children: [
                 SizedBox(height: 10),
@@ -62,7 +62,7 @@ class MyAppointments extends StatelessWidget {
                     DrCardUpcoming(),
                   ],
                 ),
-                const Divider(
+                Divider(
                   color: kTextfield,
                   thickness: 0.4,
                   indent: 15,
@@ -85,6 +85,7 @@ class MyAppointments extends StatelessWidget {
                     ],
                   ),
                 ),
+                SizedBox(height: 10),
                 PastAppointment(),
               ],
             ),
