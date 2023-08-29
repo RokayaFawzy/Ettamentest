@@ -1,7 +1,5 @@
 import 'package:ettamentest/constant.dart';
-import 'package:ettamentest/modules/branch_screens/dr_details.dart';
 import 'package:ettamentest/modules/branch_screens/edit_dr_appointment.dart';
-import 'package:ettamentest/modules/widgets/custom_botton.dart';
 import 'package:flutter/material.dart';
 
 class DashboardDrCard extends StatelessWidget {
@@ -80,12 +78,6 @@ class DashboardDrCard extends StatelessWidget {
               IconButton(
                 onPressed: () {
                   _showDialog(context);
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(
-                  //     builder: (context) => const SeeMore(),
-                  //   ),
-                  // );
                 },
                 icon: const Icon(
                   Icons.more_vert,
@@ -114,48 +106,60 @@ class DashboardDrCard extends StatelessWidget {
 }
 
 void _showDialog(BuildContext context) {
+  String selectedAction = "Edit"; // Set an initial value
+
   showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return AlertDialog(
-            elevation: 50,
-            title: const Text(
-              "My Appointment",
-              style: TextStyle(
-                  color: kPrimaryColor,
-                  fontSize: 16,
-                  fontFamily: kHomeFonts,
-                  fontWeight: FontWeight.w600,
-                  height: 1.20),
-            ),
-            content: SingleChildScrollView(
-                child: ListBody(children: [
-              Row(
-                children: [
-                  Container(
-                      width: 100,
-                      child: CustomButton(
-                        text: "Edit",
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const EditDrAppointment(),
-                            ),
-                          );
-                        },
-                      )),
-                  const SizedBox(width: 30),
-                  Container(
-                      width: 100,
-                      child: CustomButton(
-                        text: "Cancel",
-                        onTap: () {
-                          Navigator.of(context).pop();
-                        },
-                      )),
-                ],
-              ),
-            ])));
-      });
+    context: context,
+    builder: (BuildContext context) {
+      return AlertDialog(
+        elevation: 50,
+        title: const Text(
+          "My Appointment",
+          style: TextStyle(
+            color: kPrimaryColor,
+            fontSize: 16,
+            fontFamily: kHomeFonts,
+            fontWeight: FontWeight.w600,
+            height: 1.20,
+          ),
+        ),
+        content: StatefulBuilder(
+          builder: (BuildContext context, StateSetter setState) {
+            return Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                DropdownButton<String>(
+                  value: selectedAction,
+                  hint: Text("Select an action"),
+                  onChanged: (String? newValue) {
+                    setState(() {
+                      selectedAction = newValue!;
+                    });
+
+                    // Handle different actions here
+                    if (newValue == "Edit") {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const EditDrAppointment(),
+                        ),
+                      );
+                    } else if (newValue == "Cancel") {
+                      Navigator.of(context).pop();
+                    }
+                  },
+                  items: <String>["Edit", "Cancel"].map((String value) {
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Text(value),
+                    );
+                  }).toList(),
+                ),
+              ],
+            );
+          },
+        ),
+      );
+    },
+  );
 }
