@@ -1,4 +1,6 @@
 import 'package:ettamentest/modules/app_screens/widget_dashboard/dash_dr.dart';
+import 'package:ettamentest/modules/branch_screens/edit_Info.dart';
+import 'package:ettamentest/modules/screens/welcome_screen.dart';
 import 'package:ettamentest/modules/widgets/date_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -19,18 +21,18 @@ class _ProfileScreenState extends State<ProfileScreen> {
         body: SafeArea(
       child: ListView(
         shrinkWrap: true,
-        children: const [
+        children: [
           Column(
             children: [
-              SizedBox(height: 6),
-              CircleAvatar(
+              const SizedBox(height: 6),
+              const CircleAvatar(
                 radius: 70,
                 backgroundImage: AssetImage('assets/images/images (1).jpeg'),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              Center(
+              const Center(
                 child: Text(
                   "Name",
                   style: TextStyle(
@@ -42,7 +44,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                 ),
               ),
-              Positioned(
+              const Positioned(
                 left: 116,
                 top: 270,
                 child: Center(
@@ -56,11 +58,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               ListTile(
-                title: Text(
+                title: const Text(
                   'Personal info',
                   style: TextStyle(
                     fontFamily: kFont,
@@ -69,60 +71,92 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-                leading: Icon(
+                leading: const Icon(
                   CupertinoIcons.person,
                   color: kIconcolor,
                 ),
-                trailing: Icon(
+                trailing: const Icon(
                   Icons.arrow_forward_ios_sharp,
                   color: kPrimaryColor,
                   size: 10,
                 ),
+                onTap: () {},
               ),
-              Divider(
+              const Divider(
                 color: kTextfield,
                 thickness: 0.4,
                 indent: 15,
                 endIndent: 15,
                 height: 15,
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.all(8.0),
                 child: Row(
                   children: [
-                    Text("My appointments",
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w700,
-                        )),
+                    Text(
+                      "My appointments",
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                          fontFamily: kHomeFonts,
+                          color: kPrimaryColor),
+                    ),
                   ],
                 ),
               ),
-              Row(
+              const Row(
                 children: [
                   DateWidget(),
                   DashboardDrCard(),
                 ],
               ),
-              Row(
+              const Row(
                 children: [
                   DateWidget(),
                   DashboardDrCard(),
                 ],
               ),
-              Row(
+              const Row(
                 children: [
                   DateWidget(),
                   DashboardDrCard(),
                 ],
               ),
-              Row(
+              const Row(
                 children: [
                   DateWidget(),
                   DashboardDrCard(),
                 ],
               ),
-              Divider(
+              ListTile(
+                title: const Text(
+                  'Edit',
+                  style: TextStyle(
+                    fontFamily: kFont,
+                    fontSize: 14,
+                    color: kPrimaryColor,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+                leading: const Icon(
+                  Icons.edit,
+                  color: kIconcolor,
+                ),
+                trailing: const Icon(
+                  Icons.arrow_forward_ios_sharp,
+                  color: kPrimaryColor,
+                  size: 10,
+                ),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const EditInformation(),
+                    ),
+                  );
+                },
+              ),
+              const Divider(
                 color: kTextfield,
                 thickness: 0.4,
                 indent: 15,
@@ -130,7 +164,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 height: 15,
               ),
               ListTile(
-                title: Text(
+                title: const Text(
                   'Log out',
                   style: TextStyle(
                     fontFamily: kFont,
@@ -139,11 +173,25 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-                leading: Icon(
+                leading: const Icon(
                   Icons.logout,
                   color: kIconcolor,
                 ),
-                // onTap: (){},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const welcomeScreen(),
+                    ),
+                  );
+                },
+              ),
+              const Divider(
+                color: kTextfield,
+                thickness: 0.4,
+                indent: 15,
+                endIndent: 15,
+                height: 15,
               ),
             ],
           )

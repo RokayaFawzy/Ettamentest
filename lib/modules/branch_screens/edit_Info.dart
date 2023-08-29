@@ -47,7 +47,7 @@ class EditInformation extends StatelessWidget {
                     backgroundColor: Colors.black38,
                     child: CircleAvatar(
                       radius: 49,
-                      backgroundImage: AssetImage('assets/images/images.jpeg'),
+                      backgroundImage: AssetImage('assets/images/123.jpg'),
                     ),
                   ),
                 ),

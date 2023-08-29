@@ -39,9 +39,10 @@ class ReadMore extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(8),
               width: 350,
-              height: 160,
+              height: 180,
               child: const Text(
                   "Amet amet Lorem eu consectetur in deserunt nostrud dolor culpa ad sint amet. Nostrud deserunt consectetur culpa minim mollit veniam aliquip pariatur exercitation ullamco ea voluptate et. Pariatur ipsum mollit magna proident nisi ipsum.",
+                  overflow: TextOverflow.visible,
                   style: TextStyle(
                     fontSize: 16,
                     color: kPrimaryColor,
@@ -54,6 +55,7 @@ class ReadMore extends StatelessWidget {
               child: Row(
                 children: [
                   Text("Certificates",
+                      overflow: TextOverflow.fade,
                       style: TextStyle(
                         fontSize: 16,
                         color: kPrimaryColor,
@@ -70,6 +72,7 @@ class ReadMore extends StatelessWidget {
               height: 160,
               child: const Text(
                   "Amet amet Lorem eu consectetur in deserunt nostrud dolor culpa ad sint amet. Nostrud deserunt consectetur culpa minim mollit veniam aliquip pariatur exercitation ullamco ea voluptate et. Pariatur ipsum mollit magna proident nisi ipsum.",
+                  overflow: TextOverflow.visible,
                   style: TextStyle(
                     fontSize: 16,
                     color: kPrimaryColor,
