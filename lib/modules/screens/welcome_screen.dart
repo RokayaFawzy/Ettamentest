@@ -1,8 +1,6 @@
 import 'package:ettamentest/constant.dart';
 import 'package:ettamentest/modules/screens/login_screen.dart';
 import 'package:ettamentest/modules/app_screens/profile_screen.dart';
-import 'package:ettamentest/modules/widgets/image_row.dart';
-import 'package:ettamentest/modules/widgets/notifications_widget.dart';
 import 'package:flutter/material.dart';
 import '../app_screens/navbar_root.dart';
 
@@ -109,7 +107,6 @@ class welcomeScreen extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) =>
-                                // PhoneVerify()
                                 const ProfileScreen(),
                           ),
                         );

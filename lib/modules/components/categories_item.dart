@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Category extends StatelessWidget {
-  Category({this.text, this.color, this.onTap});
+  Category({super.key, this.text, this.color, this.onTap});
   String? text;
   Color? color;
   Function()? onTap;
@@ -16,7 +16,7 @@ class Category extends StatelessWidget {
         child: Center(
           child: Text(
             text!,
-            style: TextStyle(color: Colors.green, fontSize: 18),
+            style: const TextStyle(color: Colors.green, fontSize: 18),
           ),
         ),
       ),

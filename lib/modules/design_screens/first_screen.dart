@@ -22,7 +22,7 @@ class FirstScreen extends StatelessWidget {
                   ),
                 ),
                 Align(
-                  alignment: Alignment(0, -0.1),
+                  alignment: const Alignment(0, -0.1),
                   child: Image.asset(
                     "assets/images/Rectangle 126.png",
                     fit: BoxFit.cover,
@@ -40,7 +40,7 @@ class FirstScreen extends StatelessWidget {
                           color: kPrimaryColor)),
                 ),
                 Align(
-                  alignment: Alignment(0, 0.1),
+                  alignment: const Alignment(0, 0.1),
                   child: Image.asset(
                     "assets/images/Rectangle 127.png",
                     fit: BoxFit.cover,

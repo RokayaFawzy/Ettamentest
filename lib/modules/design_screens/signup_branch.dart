@@ -17,14 +17,14 @@ class SignUpBracch extends StatelessWidget {
             child: Stack(
               children: [
                 Align(
-                  alignment: Alignment(0, -0.3),
+                  alignment: const Alignment(0, -0.3),
                   child: Image.asset(
                     "assets/images/BG object (1).png",
                     fit: BoxFit.fill,
                   ),
                 ),
                 Align(
-                  alignment: Alignment(0, -0.25),
+                  alignment: const Alignment(0, -0.25),
                   child: Image.asset(
                     "assets/images/user.png",
                     fit: BoxFit.cover,
@@ -32,12 +32,12 @@ class SignUpBracch extends StatelessWidget {
                     height: 49,
                   ),
                 ),
-                Align(
-                  alignment: Alignment(0, 0.2),
-                  child: Container(
+                const Align(
+                  alignment:  Alignment(0, 0.2),
+                  child: SizedBox(
                     width: 250,
                     height: 66,
-                    child: const Text("Account Created!",
+                    child: Text("Account Created!",
                         style: TextStyle(
                             fontSize: 25,
                             fontWeight: FontWeight.w700,
@@ -45,12 +45,12 @@ class SignUpBracch extends StatelessWidget {
                             color: kPrimaryColor)),
                   ),
                 ),
-                Align(
+                const Align(
                   alignment: Alignment(0, 0.3),
-                  child: Container(
+                  child: SizedBox(
                     width: 237,
                     height: 49,
-                    child: const Text(
+                    child: Text(
                         "Your account had been created successfully.",
                         style: TextStyle(
                             fontSize: 16,
@@ -60,7 +60,7 @@ class SignUpBracch extends StatelessWidget {
                   ),
                 ),
                 Align(
-                    alignment: Alignment(0, 0.8),
+                    alignment: const Alignment(0, 0.8),
                     child: CustomButton(
                       text: "Done",
                       onTap: () {},

@@ -12,7 +12,7 @@ class EditDrAppointment extends StatefulWidget {
 }
 
 class _EditDrAppointmentState extends State<EditDrAppointment> {
-  TextEditingController _date = TextEditingController();
+  final TextEditingController _date = TextEditingController();
 
   @override
   Widget build(BuildContext context) {

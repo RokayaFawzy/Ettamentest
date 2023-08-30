@@ -2,8 +2,6 @@ import 'package:ettamentest/modules/components/item.dart';
 import 'package:ettamentest/modules/models/categories.dart';
 import 'package:flutter/material.dart';
 
-import '../../constant.dart';
-
 class CategoriesItem extends StatelessWidget {
   const CategoriesItem({super.key});
   final List<Item> number = const [

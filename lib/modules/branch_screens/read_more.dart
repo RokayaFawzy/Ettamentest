@@ -65,7 +65,7 @@ class ReadMore extends StatelessWidget {
                 ],
               ),
             ),
-            Container(height: 200, child: const ImageRow()),
+            const SizedBox(height: 200, child: ImageRow()),
             Container(
               padding: const EdgeInsets.all(8),
               width: 350,

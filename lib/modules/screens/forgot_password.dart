@@ -38,11 +38,6 @@ class _ForgotPasswordState extends State<ForgotPassword> {
               Navigator.of(context).pop();
             },
           ),
-          // const Icon(Icons.arrow_back_ios,),
-          // surfaceTintColor: Colors.white,
-          // backgroundColor: Colors.white,
-          // foregroundColor: Colors.white,
-
           elevation: 0,
           backgroundColor: Colors.transparent,
           iconTheme: const IconThemeData(color: kPrimaryColor)),
@@ -62,8 +57,6 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                     style: TextStyle(
                       color: Color.fromARGB(142, 14, 36, 73),
                       fontSize: 18,
-                      // fontWeight: FontWeight.bold,
-                      // letterSpacing: 1,
                       wordSpacing: 1,
                     ),
                   ),

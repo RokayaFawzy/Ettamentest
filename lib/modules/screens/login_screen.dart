@@ -1,6 +1,4 @@
-import 'package:ettamentest/modules/design_screens/first_screen.dart';
 import 'package:ettamentest/modules/screens/forgot_password.dart';
-import 'package:ettamentest/modules/screens/reset_password.dart';
 import 'package:ettamentest/modules/screens/signup_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -34,7 +32,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             elevation: 0,
             backgroundColor: Colors.transparent,
-            iconTheme: IconThemeData(color: kPrimaryColor)),
+            iconTheme: const IconThemeData(color: kPrimaryColor)),
         body: SafeArea(
           child: Padding(
             padding: const EdgeInsets.all(16),

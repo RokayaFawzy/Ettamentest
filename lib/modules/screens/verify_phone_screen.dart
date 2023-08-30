@@ -4,8 +4,6 @@ import 'package:intl_phone_field/intl_phone_field.dart';
 import '../../constant.dart';
 import '../branch_screens/code_verify.dart';
 import '../widgets/custom_botton.dart';
-import '../widgets/custom_text_field.dart';
-
 class PhoneVerify extends StatefulWidget {
   const PhoneVerify({super.key});
 
@@ -55,20 +53,14 @@ class _PhoneVerifyState extends State<PhoneVerify> {
                     style: TextStyle(
                       color: Color.fromARGB(142, 14, 36, 73),
                       fontSize: 18,
-                      // fontWeight: FontWeight.bold,
-                      // letterSpacing: 1,
+
                       wordSpacing: 1,
                     ),
                   ),
                 ),
               ),
               const SizedBox(height: 30),
-              // CustomTextField(
-              //     inputType: TextInputType.number,
-              //     onChange: (data) {
-              //       phone = data;
-              //     },
-              //     hintText: 'phone number'),
+
               const IntlPhoneField(
                 decoration: InputDecoration(
                     labelText: "phoneNumber",
