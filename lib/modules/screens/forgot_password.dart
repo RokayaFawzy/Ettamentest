@@ -1,3 +1,4 @@
+import 'package:ettamentest/modules/branch_screens/code_verify.dart';
 import 'package:ettamentest/modules/screens/reset_password.dart';
 import 'package:ettamentest/modules/widgets/custom_botton.dart';
 import 'package:flutter/material.dart';
@@ -76,7 +77,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const ResetPassword(),
+                      builder: (context) => const CodePhone(),
                     ),
                   );
                 },

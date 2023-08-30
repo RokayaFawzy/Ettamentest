@@ -3,10 +3,7 @@ import 'package:ettamentest/modules/app_screens/widget_dashboard/dash_dr.dart';
 import 'package:ettamentest/modules/app_screens/widget_dashboard/list_row_diagnostics.dart';
 import 'package:ettamentest/modules/app_screens/widget_dashboard/list_row_majors.dart';
 import 'package:ettamentest/modules/app_screens/widget_dashboard/advertisement.dart';
-import 'package:ettamentest/modules/widgets/dr_card.dart';
 import 'package:flutter/material.dart';
-
-import '../widgets/categories_item.dart';
 import '../widgets/date_widget.dart';
 import '../widgets/dr_infor_card.dart';
 

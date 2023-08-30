@@ -82,7 +82,7 @@ class _ResetPasswordState extends State<ResetPassword> {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => BranchReset()),
+                    MaterialPageRoute(builder: (context) => const BranchReset()),
                   );
                 },
               ),

@@ -175,15 +175,16 @@ class _LoginScreenState extends State<LoginScreen> {
           ],
         ),
         TextButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const ForgotPassword(),
-                ),
-              );
-            },
-            child: _buildGreyText("Forgot password?", FontWeight.w400)),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const ForgotPassword(),
+              ),
+            );
+          },
+          child: _buildGreyText("Forgot password?", FontWeight.w400),
+        ),
       ],
     );
   }

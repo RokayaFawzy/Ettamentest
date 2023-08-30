@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:ettamentest/modules/screens/reset_password.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_verification_code/flutter_verification_code.dart';
 
@@ -166,12 +167,12 @@ class _CodePhoneState extends State<CodePhone> {
                     //     :
                     () {
                   // verify();
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(
-                  //     builder: (context) => const CodePhone(),
-                  //   ),
-                  // );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ResetPassword(),
+                    ),
+                  );
                 },
               ),
             ],
