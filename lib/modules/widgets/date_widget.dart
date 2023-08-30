@@ -14,7 +14,6 @@ class DateWidget extends StatelessWidget {
       child: Container(
           color: kPrimaryColor,
           child: const Column(
-            // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               SizedBox(height: 15),
               Text(
